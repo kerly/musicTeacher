@@ -44,16 +44,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="APatternDefinition.cs" />
+    <Compile Include="APlayablePattern.cs" />
+    <Compile Include="MusicChord.cs" />
+    <Compile Include="MusicDefinitions.cs" />
+    <Compile Include="FormTrainingPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormTrainingPage.Designer.cs">
+      <DependentUpon>FormTrainingPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MusicInterval.cs" />
+    <Compile Include="MusicNote.cs" />
+    <Compile Include="MusicScale.cs" />
+    <Compile Include="NoteFinder.cs" />
+    <Compile Include="PatternDefinitionChord.cs" />
+    <Compile Include="PatternDefinitionInterval.cs" />
+    <Compile Include="PatternDefinitionScale.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormTrainingPage.resx">
+      <DependentUpon>FormTrainingPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
