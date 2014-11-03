@@ -65,7 +65,33 @@
             this.btnPianoE2 = new System.Windows.Forms.Button();
             this.btnPianoD2 = new System.Windows.Forms.Button();
             this.btnPianoC2 = new System.Windows.Forms.Button();
+            this.tabControlDefinitionBox = new System.Windows.Forms.TabControl();
+            this.tabPageChords = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.radioBtnTabBoxChordMajor = new System.Windows.Forms.RadioButton();
+            this.comboBoxTabBoxChords = new System.Windows.Forms.ComboBox();
+            this.panelTabNotes = new System.Windows.Forms.Panel();
+            this.btnTabNoteRandom = new System.Windows.Forms.Button();
+            this.btnTabNoteB = new System.Windows.Forms.Button();
+            this.btnTabNoteAs = new System.Windows.Forms.Button();
+            this.btnTabNoteA = new System.Windows.Forms.Button();
+            this.btnTabNoteGs = new System.Windows.Forms.Button();
+            this.btnTabNoteG = new System.Windows.Forms.Button();
+            this.btnTabNoteFs = new System.Windows.Forms.Button();
+            this.btnTabNoteF = new System.Windows.Forms.Button();
+            this.btnTabNoteE = new System.Windows.Forms.Button();
+            this.btnTabNoteDs = new System.Windows.Forms.Button();
+            this.btnTabNoteD = new System.Windows.Forms.Button();
+            this.btnTabNoteCs = new System.Windows.Forms.Button();
+            this.btnTabNoteC = new System.Windows.Forms.Button();
+            this.tabPageScales = new System.Windows.Forms.TabPage();
+            this.tabPageIntervals = new System.Windows.Forms.TabPage();
+            this.radioBtnTabBoxChordMinor = new System.Windows.Forms.RadioButton();
             this.pianoPanel.SuspendLayout();
+            this.tabControlDefinitionBox.SuspendLayout();
+            this.tabPageChords.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panelTabNotes.SuspendLayout();
             this.SuspendLayout();
             // 
             // pianoPanel
@@ -522,15 +548,292 @@
             this.btnPianoC2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoC2.UseVisualStyleBackColor = false;
             // 
-            // FormTraining
+            // tabControlDefinitionBox
+            // 
+            this.tabControlDefinitionBox.Controls.Add(this.tabPageChords);
+            this.tabControlDefinitionBox.Controls.Add(this.tabPageScales);
+            this.tabControlDefinitionBox.Controls.Add(this.tabPageIntervals);
+            this.tabControlDefinitionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlDefinitionBox.ItemSize = new System.Drawing.Size(80, 30);
+            this.tabControlDefinitionBox.Location = new System.Drawing.Point(179, 254);
+            this.tabControlDefinitionBox.Name = "tabControlDefinitionBox";
+            this.tabControlDefinitionBox.SelectedIndex = 0;
+            this.tabControlDefinitionBox.Size = new System.Drawing.Size(776, 286);
+            this.tabControlDefinitionBox.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControlDefinitionBox.TabIndex = 73;
+            // 
+            // tabPageChords
+            // 
+            this.tabPageChords.Controls.Add(this.panel1);
+            this.tabPageChords.Controls.Add(this.comboBoxTabBoxChords);
+            this.tabPageChords.Controls.Add(this.panelTabNotes);
+            this.tabPageChords.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageChords.Location = new System.Drawing.Point(4, 34);
+            this.tabPageChords.Name = "tabPageChords";
+            this.tabPageChords.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageChords.Size = new System.Drawing.Size(768, 248);
+            this.tabPageChords.TabIndex = 0;
+            this.tabPageChords.Text = "Chords";
+            this.tabPageChords.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.radioBtnTabBoxChordMinor);
+            this.panel1.Controls.Add(this.radioBtnTabBoxChordMajor);
+            this.panel1.Location = new System.Drawing.Point(246, 35);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(183, 94);
+            this.panel1.TabIndex = 4;
+            // 
+            // radioBtnTabBoxChordMajor
+            // 
+            this.radioBtnTabBoxChordMajor.AutoSize = true;
+            this.radioBtnTabBoxChordMajor.Location = new System.Drawing.Point(17, 12);
+            this.radioBtnTabBoxChordMajor.Name = "radioBtnTabBoxChordMajor";
+            this.radioBtnTabBoxChordMajor.Size = new System.Drawing.Size(61, 21);
+            this.radioBtnTabBoxChordMajor.TabIndex = 3;
+            this.radioBtnTabBoxChordMajor.TabStop = true;
+            this.radioBtnTabBoxChordMajor.Text = "Major";
+            this.radioBtnTabBoxChordMajor.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxTabBoxChords
+            // 
+            this.comboBoxTabBoxChords.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBoxTabBoxChords.FormattingEnabled = true;
+            this.comboBoxTabBoxChords.Items.AddRange(new object[] {
+            "Major",
+            "Minor"});
+            this.comboBoxTabBoxChords.Location = new System.Drawing.Point(54, 35);
+            this.comboBoxTabBoxChords.Name = "comboBoxTabBoxChords";
+            this.comboBoxTabBoxChords.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxTabBoxChords.TabIndex = 1;
+            this.comboBoxTabBoxChords.Text = "Chords";
+            // 
+            // panelTabNotes
+            // 
+            this.panelTabNotes.Controls.Add(this.btnTabNoteRandom);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteB);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteAs);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteA);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteGs);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteG);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteFs);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteF);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteE);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteDs);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteD);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteCs);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteC);
+            this.panelTabNotes.Location = new System.Drawing.Point(0, 184);
+            this.panelTabNotes.Name = "panelTabNotes";
+            this.panelTabNotes.Size = new System.Drawing.Size(768, 63);
+            this.panelTabNotes.TabIndex = 0;
+            // 
+            // btnTabNoteRandom
+            // 
+            this.btnTabNoteRandom.AutoSize = true;
+            this.btnTabNoteRandom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTabNoteRandom.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNoteRandom.Location = new System.Drawing.Point(630, 22);
+            this.btnTabNoteRandom.Name = "btnTabNoteRandom";
+            this.btnTabNoteRandom.Size = new System.Drawing.Size(66, 26);
+            this.btnTabNoteRandom.TabIndex = 12;
+            this.btnTabNoteRandom.Text = "Random";
+            this.btnTabNoteRandom.UseVisualStyleBackColor = true;
+            // 
+            // btnTabNoteB
+            // 
+            this.btnTabNoteB.AutoSize = true;
+            this.btnTabNoteB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTabNoteB.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNoteB.Location = new System.Drawing.Point(582, 22);
+            this.btnTabNoteB.Name = "btnTabNoteB";
+            this.btnTabNoteB.Size = new System.Drawing.Size(42, 26);
+            this.btnTabNoteB.TabIndex = 11;
+            this.btnTabNoteB.Text = " B ";
+            this.btnTabNoteB.UseVisualStyleBackColor = true;
+            // 
+            // btnTabNoteAs
+            // 
+            this.btnTabNoteAs.AutoSize = true;
+            this.btnTabNoteAs.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTabNoteAs.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNoteAs.Location = new System.Drawing.Point(534, 22);
+            this.btnTabNoteAs.Name = "btnTabNoteAs";
+            this.btnTabNoteAs.Size = new System.Drawing.Size(42, 26);
+            this.btnTabNoteAs.TabIndex = 10;
+            this.btnTabNoteAs.Text = " A#";
+            this.btnTabNoteAs.UseVisualStyleBackColor = true;
+            // 
+            // btnTabNoteA
+            // 
+            this.btnTabNoteA.AutoSize = true;
+            this.btnTabNoteA.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTabNoteA.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNoteA.Location = new System.Drawing.Point(486, 22);
+            this.btnTabNoteA.Name = "btnTabNoteA";
+            this.btnTabNoteA.Size = new System.Drawing.Size(42, 26);
+            this.btnTabNoteA.TabIndex = 9;
+            this.btnTabNoteA.Text = " A ";
+            this.btnTabNoteA.UseVisualStyleBackColor = true;
+            // 
+            // btnTabNoteGs
+            // 
+            this.btnTabNoteGs.AutoSize = true;
+            this.btnTabNoteGs.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTabNoteGs.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNoteGs.Location = new System.Drawing.Point(438, 22);
+            this.btnTabNoteGs.Name = "btnTabNoteGs";
+            this.btnTabNoteGs.Size = new System.Drawing.Size(42, 26);
+            this.btnTabNoteGs.TabIndex = 8;
+            this.btnTabNoteGs.Text = " G#";
+            this.btnTabNoteGs.UseVisualStyleBackColor = true;
+            // 
+            // btnTabNoteG
+            // 
+            this.btnTabNoteG.AutoSize = true;
+            this.btnTabNoteG.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTabNoteG.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNoteG.Location = new System.Drawing.Point(390, 22);
+            this.btnTabNoteG.Name = "btnTabNoteG";
+            this.btnTabNoteG.Size = new System.Drawing.Size(42, 26);
+            this.btnTabNoteG.TabIndex = 7;
+            this.btnTabNoteG.Text = " G ";
+            this.btnTabNoteG.UseVisualStyleBackColor = true;
+            // 
+            // btnTabNoteFs
+            // 
+            this.btnTabNoteFs.AutoSize = true;
+            this.btnTabNoteFs.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTabNoteFs.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNoteFs.Location = new System.Drawing.Point(342, 22);
+            this.btnTabNoteFs.Name = "btnTabNoteFs";
+            this.btnTabNoteFs.Size = new System.Drawing.Size(42, 26);
+            this.btnTabNoteFs.TabIndex = 6;
+            this.btnTabNoteFs.Text = " F#";
+            this.btnTabNoteFs.UseVisualStyleBackColor = true;
+            // 
+            // btnTabNoteF
+            // 
+            this.btnTabNoteF.AutoSize = true;
+            this.btnTabNoteF.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTabNoteF.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNoteF.Location = new System.Drawing.Point(294, 22);
+            this.btnTabNoteF.Name = "btnTabNoteF";
+            this.btnTabNoteF.Size = new System.Drawing.Size(42, 26);
+            this.btnTabNoteF.TabIndex = 5;
+            this.btnTabNoteF.Text = " F ";
+            this.btnTabNoteF.UseVisualStyleBackColor = true;
+            // 
+            // btnTabNoteE
+            // 
+            this.btnTabNoteE.AutoSize = true;
+            this.btnTabNoteE.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTabNoteE.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNoteE.Location = new System.Drawing.Point(246, 22);
+            this.btnTabNoteE.Name = "btnTabNoteE";
+            this.btnTabNoteE.Size = new System.Drawing.Size(42, 26);
+            this.btnTabNoteE.TabIndex = 4;
+            this.btnTabNoteE.Text = " E ";
+            this.btnTabNoteE.UseVisualStyleBackColor = true;
+            // 
+            // btnTabNoteDs
+            // 
+            this.btnTabNoteDs.AutoSize = true;
+            this.btnTabNoteDs.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTabNoteDs.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNoteDs.Location = new System.Drawing.Point(198, 22);
+            this.btnTabNoteDs.Name = "btnTabNoteDs";
+            this.btnTabNoteDs.Size = new System.Drawing.Size(42, 26);
+            this.btnTabNoteDs.TabIndex = 3;
+            this.btnTabNoteDs.Text = " D#";
+            this.btnTabNoteDs.UseVisualStyleBackColor = true;
+            // 
+            // btnTabNoteD
+            // 
+            this.btnTabNoteD.AutoSize = true;
+            this.btnTabNoteD.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTabNoteD.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNoteD.Location = new System.Drawing.Point(150, 22);
+            this.btnTabNoteD.Name = "btnTabNoteD";
+            this.btnTabNoteD.Size = new System.Drawing.Size(42, 26);
+            this.btnTabNoteD.TabIndex = 2;
+            this.btnTabNoteD.Text = " D ";
+            this.btnTabNoteD.UseVisualStyleBackColor = true;
+            // 
+            // btnTabNoteCs
+            // 
+            this.btnTabNoteCs.AutoSize = true;
+            this.btnTabNoteCs.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTabNoteCs.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNoteCs.Location = new System.Drawing.Point(102, 22);
+            this.btnTabNoteCs.Name = "btnTabNoteCs";
+            this.btnTabNoteCs.Size = new System.Drawing.Size(42, 26);
+            this.btnTabNoteCs.TabIndex = 1;
+            this.btnTabNoteCs.Text = " C#";
+            this.btnTabNoteCs.UseVisualStyleBackColor = true;
+            // 
+            // btnTabNoteC
+            // 
+            this.btnTabNoteC.AutoSize = true;
+            this.btnTabNoteC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTabNoteC.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabNoteC.Location = new System.Drawing.Point(54, 22);
+            this.btnTabNoteC.Name = "btnTabNoteC";
+            this.btnTabNoteC.Size = new System.Drawing.Size(42, 26);
+            this.btnTabNoteC.TabIndex = 0;
+            this.btnTabNoteC.Text = " C ";
+            this.btnTabNoteC.UseVisualStyleBackColor = true;
+            // 
+            // tabPageScales
+            // 
+            this.tabPageScales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageScales.Location = new System.Drawing.Point(4, 34);
+            this.tabPageScales.Name = "tabPageScales";
+            this.tabPageScales.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageScales.Size = new System.Drawing.Size(768, 248);
+            this.tabPageScales.TabIndex = 1;
+            this.tabPageScales.Text = "Scales";
+            this.tabPageScales.UseVisualStyleBackColor = true;
+            // 
+            // tabPageIntervals
+            // 
+            this.tabPageIntervals.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageIntervals.Location = new System.Drawing.Point(4, 34);
+            this.tabPageIntervals.Name = "tabPageIntervals";
+            this.tabPageIntervals.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageIntervals.Size = new System.Drawing.Size(768, 248);
+            this.tabPageIntervals.TabIndex = 2;
+            this.tabPageIntervals.Text = "Intervals";
+            this.tabPageIntervals.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnTabBoxChordMinor
+            // 
+            this.radioBtnTabBoxChordMinor.AutoSize = true;
+            this.radioBtnTabBoxChordMinor.Location = new System.Drawing.Point(17, 39);
+            this.radioBtnTabBoxChordMinor.Name = "radioBtnTabBoxChordMinor";
+            this.radioBtnTabBoxChordMinor.Size = new System.Drawing.Size(61, 21);
+            this.radioBtnTabBoxChordMinor.TabIndex = 4;
+            this.radioBtnTabBoxChordMinor.TabStop = true;
+            this.radioBtnTabBoxChordMinor.Text = "Minor";
+            this.radioBtnTabBoxChordMinor.UseVisualStyleBackColor = true;
+            // 
+            // FormTrainingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 261);
+            this.ClientSize = new System.Drawing.Size(1236, 637);
+            this.Controls.Add(this.tabControlDefinitionBox);
             this.Controls.Add(this.pianoPanel);
-            this.Name = "FormTraining";
+            this.Name = "FormTrainingPage";
             this.Text = "Music Teacher";
             this.pianoPanel.ResumeLayout(false);
+            this.tabControlDefinitionBox.ResumeLayout(false);
+            this.tabPageChords.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panelTabNotes.ResumeLayout(false);
+            this.panelTabNotes.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -574,6 +877,28 @@
         internal System.Windows.Forms.Button btnPianoE2;
         internal System.Windows.Forms.Button btnPianoD2;
         internal System.Windows.Forms.Button btnPianoC2;
+        private System.Windows.Forms.TabControl tabControlDefinitionBox;
+        private System.Windows.Forms.TabPage tabPageChords;
+        private System.Windows.Forms.TabPage tabPageScales;
+        private System.Windows.Forms.TabPage tabPageIntervals;
+        private System.Windows.Forms.Panel panelTabNotes;
+        private System.Windows.Forms.Button btnTabNoteRandom;
+        private System.Windows.Forms.Button btnTabNoteB;
+        private System.Windows.Forms.Button btnTabNoteAs;
+        private System.Windows.Forms.Button btnTabNoteA;
+        private System.Windows.Forms.Button btnTabNoteGs;
+        private System.Windows.Forms.Button btnTabNoteG;
+        private System.Windows.Forms.Button btnTabNoteFs;
+        private System.Windows.Forms.Button btnTabNoteF;
+        private System.Windows.Forms.Button btnTabNoteE;
+        private System.Windows.Forms.Button btnTabNoteDs;
+        private System.Windows.Forms.Button btnTabNoteD;
+        private System.Windows.Forms.Button btnTabNoteCs;
+        private System.Windows.Forms.Button btnTabNoteC;
+        private System.Windows.Forms.ComboBox comboBoxTabBoxChords;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton radioBtnTabBoxChordMajor;
+        private System.Windows.Forms.RadioButton radioBtnTabBoxChordMinor;
     }
 }
 
