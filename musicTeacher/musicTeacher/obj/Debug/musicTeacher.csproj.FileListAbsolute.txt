@@ -2,7 +2,6 @@ C:\Users\Kerl\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming La
 C:\Users\Kerl\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\bin\Debug\musicTeacher.exe
 C:\Users\Kerl\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\bin\Debug\musicTeacher.pdb
 C:\Users\Kerl\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.csprojResolveAssemblyReference.cache
-C:\Users\Kerl\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.Form1.resources
 C:\Users\Kerl\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.Properties.Resources.resources
 C:\Users\Kerl\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.csproj.GenerateResource.Cache
 C:\Users\Kerl\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.exe
@@ -16,3 +15,4 @@ C:\Users\Kyle\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming La
 C:\Users\Kyle\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.Properties.Resources.resources
 C:\Users\Kyle\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.csproj.GenerateResource.Cache
 C:\Users\Kyle\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.FormTrainingPage.resources
+C:\Users\Kerl\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.FormTrainingPage.resources

@@ -44,26 +44,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="APatternDefinition.cs" />
-    <Compile Include="APlayablePattern.cs" />
-    <Compile Include="MusicChord.cs" />
-    <Compile Include="MusicDefinitions.cs" />
-    <Compile Include="FormTrainingPage.cs">
+    <Compile Include="modelClasses\APatternDefinition.cs" />
+    <Compile Include="modelClasses\APlayablePattern.cs" />
+    <Compile Include="modelClasses\MusicChord.cs" />
+    <Compile Include="utilityClasses\MusicDefinitions.cs" />
+    <Compile Include="forms\FormTrainingPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTrainingPage.Designer.cs">
+    <Compile Include="forms\FormTrainingPage.Designer.cs">
       <DependentUpon>FormTrainingPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MusicInterval.cs" />
-    <Compile Include="MusicNote.cs" />
-    <Compile Include="MusicScale.cs" />
-    <Compile Include="NoteFinder.cs" />
-    <Compile Include="PatternDefinitionChord.cs" />
-    <Compile Include="PatternDefinitionInterval.cs" />
-    <Compile Include="PatternDefinitionScale.cs" />
+    <Compile Include="modelClasses\MusicInterval.cs" />
+    <Compile Include="modelClasses\MusicNote.cs" />
+    <Compile Include="modelClasses\MusicScale.cs" />
+    <Compile Include="utilityClasses\NoteFinder.cs" />
+    <Compile Include="modelClasses\PatternDefinitionChord.cs" />
+    <Compile Include="modelClasses\PatternDefinitionInterval.cs" />
+    <Compile Include="modelClasses\PatternDefinitionScale.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormTrainingPage.resx">
+    <EmbeddedResource Include="forms\FormTrainingPage.resx">
       <DependentUpon>FormTrainingPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

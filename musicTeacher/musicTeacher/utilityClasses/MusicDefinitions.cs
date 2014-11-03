@@ -78,7 +78,6 @@ namespace musicTeacher
         {
             List<PatternDefinitionInterval> result = new List<PatternDefinitionInterval>();
 
-            result.Add(new PatternDefinitionInterval("Unison", UNISON, new List<int> { 1, 1 }));
             result.Add(new PatternDefinitionInterval("Minor 2nd", MINOR_SECOND, new List<int> { 1, 2 }));
             result.Add(new PatternDefinitionInterval("Major 2nd", MAJOR_SECOND, new List<int> { 1, 2 }));
             result.Add(new PatternDefinitionInterval("Minor 3rd", MINOR_THIRD, new List<int> { 1, 3 }));
