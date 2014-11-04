@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\EarTrainingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\EarTrainingPage.Designer.cs">
+      <DependentUpon>EarTrainingPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="modelClasses\APatternDefinition.cs" />
     <Compile Include="modelClasses\APlayablePattern.cs" />
     <Compile Include="modelClasses\MusicChord.cs" />
@@ -63,6 +69,9 @@
     <Compile Include="modelClasses\PatternDefinitionScale.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\EarTrainingPage.resx">
+      <DependentUpon>EarTrainingPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\FormTrainingPage.resx">
       <DependentUpon>FormTrainingPage.cs</DependentUpon>
     </EmbeddedResource>

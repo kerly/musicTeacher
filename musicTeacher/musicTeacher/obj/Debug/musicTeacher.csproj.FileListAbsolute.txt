@@ -16,3 +16,13 @@ C:\Users\Kyle\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming La
 C:\Users\Kyle\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.csproj.GenerateResource.Cache
 C:\Users\Kyle\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.FormTrainingPage.resources
 C:\Users\Kerl\Dropbox\Programming Workspace\Visual Studio 2010\C#\Programming Languages\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.FormTrainingPage.resources
+C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\bin\Debug\musicTeacher.exe.config
+C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.exe
+C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.pdb
+C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\bin\Debug\musicTeacher.exe
+C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\bin\Debug\musicTeacher.pdb
+C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.csprojResolveAssemblyReference.cache
+C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.FormTrainingPage.resources
+C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.Properties.Resources.resources
+C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.csproj.GenerateResource.Cache
+C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.forms.EarTrainingPage.resources
