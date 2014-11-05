@@ -73,5 +73,10 @@ namespace musicTeacher
 
             return result;
         }
+
+        private void FormTrainingPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

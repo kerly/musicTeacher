@@ -26,3 +26,14 @@ C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\obj\Debug
 C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.Properties.Resources.resources
 C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.csproj.GenerateResource.Cache
 C:\Users\Stacy\Documents\GitHub\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.forms.EarTrainingPage.resources
+C:\Users\My Main\Dropbox\zWorkspaces\Piano APP\musicTeacher\musicTeacher\musicTeacher\bin\Debug\musicTeacher.exe.config
+C:\Users\My Main\Dropbox\zWorkspaces\Piano APP\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.exe
+C:\Users\My Main\Dropbox\zWorkspaces\Piano APP\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.pdb
+C:\Users\My Main\Dropbox\zWorkspaces\Piano APP\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.g.resources
+C:\Users\My Main\Dropbox\zWorkspaces\Piano APP\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.forms.EarTrainingPage.resources
+C:\Users\My Main\Dropbox\zWorkspaces\Piano APP\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.FormTrainingPage.resources
+C:\Users\My Main\Dropbox\zWorkspaces\Piano APP\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.Properties.Resources.resources
+C:\Users\My Main\Dropbox\zWorkspaces\Piano APP\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.csproj.GenerateResource.Cache
+C:\Users\My Main\Dropbox\zWorkspaces\Piano APP\musicTeacher\musicTeacher\musicTeacher\bin\Debug\musicTeacher.exe
+C:\Users\My Main\Dropbox\zWorkspaces\Piano APP\musicTeacher\musicTeacher\musicTeacher\bin\Debug\musicTeacher.pdb
+C:\Users\My Main\Dropbox\zWorkspaces\Piano APP\musicTeacher\musicTeacher\musicTeacher\obj\Debug\musicTeacher.forms.MenuPage.resources

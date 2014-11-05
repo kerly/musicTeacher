@@ -66,6 +66,23 @@
             this.btnPianoD2 = new System.Windows.Forms.Button();
             this.btnPianoC2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.lblTrainingChoicesIntervals = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioBtnTrainingChoicesIntervalUnison = new System.Windows.Forms.RadioButton();
+            this.lblTrainingChoicesScales = new System.Windows.Forms.Label();
+            this.radioBtnTrainingChoicesScaleMinor = new System.Windows.Forms.RadioButton();
+            this.radioBtnTrainingChoicesScaleMajor = new System.Windows.Forms.RadioButton();
+            this.lblTrainingChoicesChords = new System.Windows.Forms.Label();
             this.radioBtnTrainingChoicesChordMinor = new System.Windows.Forms.RadioButton();
             this.radioBtnTrainingChoicesChordMajor = new System.Windows.Forms.RadioButton();
             this.panelTabNotes = new System.Windows.Forms.Panel();
@@ -83,23 +100,6 @@
             this.btnTabNoteCs = new System.Windows.Forms.Button();
             this.btnTabNoteC = new System.Windows.Forms.Button();
             this.groupBoxTrainingChoices = new System.Windows.Forms.GroupBox();
-            this.lblTrainingChoicesChords = new System.Windows.Forms.Label();
-            this.lblTrainingChoicesScales = new System.Windows.Forms.Label();
-            this.radioBtnTrainingChoicesScaleMinor = new System.Windows.Forms.RadioButton();
-            this.radioBtnTrainingChoicesScaleMajor = new System.Windows.Forms.RadioButton();
-            this.lblTrainingChoicesIntervals = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioBtnTrainingChoicesIntervalUnison = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.pianoPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTabNotes.SuspendLayout();
@@ -587,6 +587,190 @@
             this.panel1.Size = new System.Drawing.Size(697, 190);
             this.panel1.TabIndex = 4;
             // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(579, 102);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(85, 21);
+            this.radioButton8.TabIndex = 21;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "Major 7th";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(579, 75);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(85, 21);
+            this.radioButton9.TabIndex = 20;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.Text = "Minor 7th";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Location = new System.Drawing.Point(579, 48);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(85, 21);
+            this.radioButton10.TabIndex = 19;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "Major 6th";
+            this.radioButton10.UseVisualStyleBackColor = true;
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Location = new System.Drawing.Point(478, 129);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(85, 21);
+            this.radioButton11.TabIndex = 18;
+            this.radioButton11.TabStop = true;
+            this.radioButton11.Text = "Minor 6th";
+            this.radioButton11.UseVisualStyleBackColor = true;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(478, 102);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(95, 21);
+            this.radioButton7.TabIndex = 17;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "Perfect 5th";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(478, 75);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(71, 21);
+            this.radioButton6.TabIndex = 16;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "Tritone";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(478, 48);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(95, 21);
+            this.radioButton5.TabIndex = 15;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Perfect 4th";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(383, 129);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(86, 21);
+            this.radioButton4.TabIndex = 14;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Major 3rd";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(383, 102);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(86, 21);
+            this.radioButton3.TabIndex = 13;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Minor 3rd";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(383, 75);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(89, 21);
+            this.radioButton2.TabIndex = 12;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Major 2nd";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // lblTrainingChoicesIntervals
+            // 
+            this.lblTrainingChoicesIntervals.AutoSize = true;
+            this.lblTrainingChoicesIntervals.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrainingChoicesIntervals.Location = new System.Drawing.Point(380, 20);
+            this.lblTrainingChoicesIntervals.Name = "lblTrainingChoicesIntervals";
+            this.lblTrainingChoicesIntervals.Size = new System.Drawing.Size(61, 17);
+            this.lblTrainingChoicesIntervals.TabIndex = 11;
+            this.lblTrainingChoicesIntervals.Text = "Intervals";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(383, 48);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(89, 21);
+            this.radioButton1.TabIndex = 10;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Minor 2nd";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnTrainingChoicesIntervalUnison
+            // 
+            this.radioBtnTrainingChoicesIntervalUnison.AutoSize = true;
+            this.radioBtnTrainingChoicesIntervalUnison.Location = new System.Drawing.Point(579, 129);
+            this.radioBtnTrainingChoicesIntervalUnison.Name = "radioBtnTrainingChoicesIntervalUnison";
+            this.radioBtnTrainingChoicesIntervalUnison.Size = new System.Drawing.Size(71, 21);
+            this.radioBtnTrainingChoicesIntervalUnison.TabIndex = 9;
+            this.radioBtnTrainingChoicesIntervalUnison.TabStop = true;
+            this.radioBtnTrainingChoicesIntervalUnison.Text = "Octave";
+            this.radioBtnTrainingChoicesIntervalUnison.UseVisualStyleBackColor = true;
+            // 
+            // lblTrainingChoicesScales
+            // 
+            this.lblTrainingChoicesScales.AutoSize = true;
+            this.lblTrainingChoicesScales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrainingChoicesScales.Location = new System.Drawing.Point(201, 20);
+            this.lblTrainingChoicesScales.Name = "lblTrainingChoicesScales";
+            this.lblTrainingChoicesScales.Size = new System.Drawing.Size(50, 17);
+            this.lblTrainingChoicesScales.TabIndex = 8;
+            this.lblTrainingChoicesScales.Text = "Scales";
+            // 
+            // radioBtnTrainingChoicesScaleMinor
+            // 
+            this.radioBtnTrainingChoicesScaleMinor.AutoSize = true;
+            this.radioBtnTrainingChoicesScaleMinor.Location = new System.Drawing.Point(204, 75);
+            this.radioBtnTrainingChoicesScaleMinor.Name = "radioBtnTrainingChoicesScaleMinor";
+            this.radioBtnTrainingChoicesScaleMinor.Size = new System.Drawing.Size(100, 21);
+            this.radioBtnTrainingChoicesScaleMinor.TabIndex = 7;
+            this.radioBtnTrainingChoicesScaleMinor.TabStop = true;
+            this.radioBtnTrainingChoicesScaleMinor.Text = "Minor Scale";
+            this.radioBtnTrainingChoicesScaleMinor.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnTrainingChoicesScaleMajor
+            // 
+            this.radioBtnTrainingChoicesScaleMajor.AutoSize = true;
+            this.radioBtnTrainingChoicesScaleMajor.Location = new System.Drawing.Point(204, 48);
+            this.radioBtnTrainingChoicesScaleMajor.Name = "radioBtnTrainingChoicesScaleMajor";
+            this.radioBtnTrainingChoicesScaleMajor.Size = new System.Drawing.Size(100, 21);
+            this.radioBtnTrainingChoicesScaleMajor.TabIndex = 6;
+            this.radioBtnTrainingChoicesScaleMajor.TabStop = true;
+            this.radioBtnTrainingChoicesScaleMajor.Text = "Major Scale";
+            this.radioBtnTrainingChoicesScaleMajor.UseVisualStyleBackColor = true;
+            // 
+            // lblTrainingChoicesChords
+            // 
+            this.lblTrainingChoicesChords.AutoSize = true;
+            this.lblTrainingChoicesChords.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrainingChoicesChords.Location = new System.Drawing.Point(14, 20);
+            this.lblTrainingChoicesChords.Name = "lblTrainingChoicesChords";
+            this.lblTrainingChoicesChords.Size = new System.Drawing.Size(53, 17);
+            this.lblTrainingChoicesChords.TabIndex = 5;
+            this.lblTrainingChoicesChords.Text = "Chords";
+            // 
             // radioBtnTrainingChoicesChordMinor
             // 
             this.radioBtnTrainingChoicesChordMinor.AutoSize = true;
@@ -798,190 +982,6 @@
             this.groupBoxTrainingChoices.TabStop = false;
             this.groupBoxTrainingChoices.Text = "Training Choices";
             // 
-            // lblTrainingChoicesChords
-            // 
-            this.lblTrainingChoicesChords.AutoSize = true;
-            this.lblTrainingChoicesChords.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrainingChoicesChords.Location = new System.Drawing.Point(14, 20);
-            this.lblTrainingChoicesChords.Name = "lblTrainingChoicesChords";
-            this.lblTrainingChoicesChords.Size = new System.Drawing.Size(53, 17);
-            this.lblTrainingChoicesChords.TabIndex = 5;
-            this.lblTrainingChoicesChords.Text = "Chords";
-            // 
-            // lblTrainingChoicesScales
-            // 
-            this.lblTrainingChoicesScales.AutoSize = true;
-            this.lblTrainingChoicesScales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrainingChoicesScales.Location = new System.Drawing.Point(201, 20);
-            this.lblTrainingChoicesScales.Name = "lblTrainingChoicesScales";
-            this.lblTrainingChoicesScales.Size = new System.Drawing.Size(50, 17);
-            this.lblTrainingChoicesScales.TabIndex = 8;
-            this.lblTrainingChoicesScales.Text = "Scales";
-            // 
-            // radioBtnTrainingChoicesScaleMinor
-            // 
-            this.radioBtnTrainingChoicesScaleMinor.AutoSize = true;
-            this.radioBtnTrainingChoicesScaleMinor.Location = new System.Drawing.Point(204, 75);
-            this.radioBtnTrainingChoicesScaleMinor.Name = "radioBtnTrainingChoicesScaleMinor";
-            this.radioBtnTrainingChoicesScaleMinor.Size = new System.Drawing.Size(100, 21);
-            this.radioBtnTrainingChoicesScaleMinor.TabIndex = 7;
-            this.radioBtnTrainingChoicesScaleMinor.TabStop = true;
-            this.radioBtnTrainingChoicesScaleMinor.Text = "Minor Scale";
-            this.radioBtnTrainingChoicesScaleMinor.UseVisualStyleBackColor = true;
-            // 
-            // radioBtnTrainingChoicesScaleMajor
-            // 
-            this.radioBtnTrainingChoicesScaleMajor.AutoSize = true;
-            this.radioBtnTrainingChoicesScaleMajor.Location = new System.Drawing.Point(204, 48);
-            this.radioBtnTrainingChoicesScaleMajor.Name = "radioBtnTrainingChoicesScaleMajor";
-            this.radioBtnTrainingChoicesScaleMajor.Size = new System.Drawing.Size(100, 21);
-            this.radioBtnTrainingChoicesScaleMajor.TabIndex = 6;
-            this.radioBtnTrainingChoicesScaleMajor.TabStop = true;
-            this.radioBtnTrainingChoicesScaleMajor.Text = "Major Scale";
-            this.radioBtnTrainingChoicesScaleMajor.UseVisualStyleBackColor = true;
-            // 
-            // lblTrainingChoicesIntervals
-            // 
-            this.lblTrainingChoicesIntervals.AutoSize = true;
-            this.lblTrainingChoicesIntervals.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrainingChoicesIntervals.Location = new System.Drawing.Point(380, 20);
-            this.lblTrainingChoicesIntervals.Name = "lblTrainingChoicesIntervals";
-            this.lblTrainingChoicesIntervals.Size = new System.Drawing.Size(61, 17);
-            this.lblTrainingChoicesIntervals.TabIndex = 11;
-            this.lblTrainingChoicesIntervals.Text = "Intervals";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(383, 48);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(89, 21);
-            this.radioButton1.TabIndex = 10;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Minor 2nd";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioBtnTrainingChoicesIntervalUnison
-            // 
-            this.radioBtnTrainingChoicesIntervalUnison.AutoSize = true;
-            this.radioBtnTrainingChoicesIntervalUnison.Location = new System.Drawing.Point(579, 129);
-            this.radioBtnTrainingChoicesIntervalUnison.Name = "radioBtnTrainingChoicesIntervalUnison";
-            this.radioBtnTrainingChoicesIntervalUnison.Size = new System.Drawing.Size(71, 21);
-            this.radioBtnTrainingChoicesIntervalUnison.TabIndex = 9;
-            this.radioBtnTrainingChoicesIntervalUnison.TabStop = true;
-            this.radioBtnTrainingChoicesIntervalUnison.Text = "Octave";
-            this.radioBtnTrainingChoicesIntervalUnison.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(383, 75);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(89, 21);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Major 2nd";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(383, 102);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(86, 21);
-            this.radioButton3.TabIndex = 13;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Minor 3rd";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(383, 129);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(86, 21);
-            this.radioButton4.TabIndex = 14;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Major 3rd";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(478, 48);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(95, 21);
-            this.radioButton5.TabIndex = 15;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Perfect 4th";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(478, 75);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(71, 21);
-            this.radioButton6.TabIndex = 16;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Tritone";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(478, 102);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(95, 21);
-            this.radioButton7.TabIndex = 17;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Perfect 5th";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(579, 102);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(85, 21);
-            this.radioButton8.TabIndex = 21;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Major 7th";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(579, 75);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(85, 21);
-            this.radioButton9.TabIndex = 20;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Minor 7th";
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(579, 48);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(85, 21);
-            this.radioButton10.TabIndex = 19;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Major 6th";
-            this.radioButton10.UseVisualStyleBackColor = true;
-            // 
-            // radioButton11
-            // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(478, 129);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(85, 21);
-            this.radioButton11.TabIndex = 18;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "Minor 6th";
-            this.radioButton11.UseVisualStyleBackColor = true;
-            // 
             // FormTrainingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -991,6 +991,7 @@
             this.Controls.Add(this.pianoPanel);
             this.Name = "FormTrainingPage";
             this.Text = "Music Teacher";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormTrainingPage_FormClosed);
             this.pianoPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

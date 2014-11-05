@@ -1,4 +1,5 @@
-﻿using System;
+﻿using musicTeacher.forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace musicTeacher
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTrainingPage());
+            Application.Run(new MenuPage());
         }
     }
 }

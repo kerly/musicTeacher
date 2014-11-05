@@ -32,8 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,6 +45,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="forms\EarTrainingPage.cs">
@@ -49,6 +53,12 @@
     </Compile>
     <Compile Include="forms\EarTrainingPage.Designer.cs">
       <DependentUpon>EarTrainingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\MenuPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\MenuPage.Designer.cs">
+      <DependentUpon>MenuPage.cs</DependentUpon>
     </Compile>
     <Compile Include="modelClasses\APatternDefinition.cs" />
     <Compile Include="modelClasses\APlayablePattern.cs" />
@@ -75,6 +85,9 @@
     <EmbeddedResource Include="forms\FormTrainingPage.resx">
       <DependentUpon>FormTrainingPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\MenuPage.resx">
+      <DependentUpon>MenuPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -96,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
