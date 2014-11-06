@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,8 @@ namespace musicTeacher
         public const int OCTAVE = 12;
 
         // Static variables
+        public static int lowestMidiNumber;
+        public static int highestMidiNumber;
         public static List<Button> allPianoButtons;
         public static List<Button> allNoteChoiceButtons;
         public static List<Button> allChordButtons;
@@ -36,16 +39,18 @@ namespace musicTeacher
         public static List<PatternDefinitionChord> allChordDefinitions;
         public static List<PatternDefinitionScale> allScaleDefinitions;
         public static List<PatternDefinitionInterval> allIntervalDefinitions;
+        public static Dictionary<Char, String> pianoKeyMap;
 
         /// <summary>
         /// Wrapper function that sets all the definitions for this application
         /// </summary>
         public static void initDefinitions()
         {
-            allMusicNotes = createAllMusicNotes();
+            allMusicNotes = createAllMusicNotes(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\audio files\\Piano notes");
             allChordDefinitions = createAllChordDefinitions();
             allScaleDefinitions = createAllScaleDefinitions();
             allIntervalDefinitions = createAllIntervalDefinitions();
+            pianoKeyMap = createPianoKeyMap();
         }
 
         // Static methods
@@ -53,17 +58,58 @@ namespace musicTeacher
         /// Creates all MusicNote objects
         /// </summary>
         /// <returns>List of all MusicNotes</returns>
-        private static List<MusicNote> createAllMusicNotes()
+        private static List<MusicNote> createAllMusicNotes(String baseFolder)
         {
             List<MusicNote> result = new List<MusicNote>();
 
             // Add all music note objects here
-            //result.Add(new MusicNote("C2", "SOUNDFILE.WAV", 36));
-            //result.Add(new MusicNote("C#2", "SOUNDFILE2.WAV", 37));
+            int midiNumber = 36;
+            lowestMidiNumber = midiNumber;
+            result.Add(new MusicNote("C2", baseFolder + "\\C2.wav", midiNumber++));
+            result.Add(new MusicNote("C#2", Path.Combine(baseFolder, "C#2.wav"), midiNumber++));
+            result.Add(new MusicNote("D2", Path.Combine(baseFolder, "D2.wav"), midiNumber++));
+            result.Add(new MusicNote("D#2", Path.Combine(baseFolder, "D#2.wav"), midiNumber++));
+            result.Add(new MusicNote("E2", Path.Combine(baseFolder, "E2.wav"), midiNumber++));
+            result.Add(new MusicNote("F2", Path.Combine(baseFolder, "F2.wav"), midiNumber++));
+            result.Add(new MusicNote("F#2", Path.Combine(baseFolder, "F#2.wav"), midiNumber++));
+            result.Add(new MusicNote("G2", Path.Combine(baseFolder, "G2.wav"), midiNumber++));
+            result.Add(new MusicNote("G#2", Path.Combine(baseFolder, "G#2.wav"), midiNumber++));
+            result.Add(new MusicNote("A2", Path.Combine(baseFolder, "A2.wav"), midiNumber++));
+            result.Add(new MusicNote("A#2", Path.Combine(baseFolder, "A#2.wav"), midiNumber++));
+            result.Add(new MusicNote("B2", Path.Combine(baseFolder, "B2.wav"), midiNumber++));
+            result.Add(new MusicNote("C3", Path.Combine(baseFolder, "C3.wav"), midiNumber++));
+            result.Add(new MusicNote("C#3", Path.Combine(baseFolder, "C#3.wav"), midiNumber++));
+            result.Add(new MusicNote("D3", Path.Combine(baseFolder, "D3.wav"), midiNumber++));
+            result.Add(new MusicNote("D#3", Path.Combine(baseFolder, "D#3.wav"), midiNumber++));
+            result.Add(new MusicNote("E3", Path.Combine(baseFolder, "E3.wav"), midiNumber++));
+            result.Add(new MusicNote("F3", Path.Combine(baseFolder, "F3.wav"), midiNumber++));
+            result.Add(new MusicNote("F#3", Path.Combine(baseFolder, "F#3.wav"), midiNumber++));
+            result.Add(new MusicNote("G3", Path.Combine(baseFolder, "G3.wav"), midiNumber++));
+            result.Add(new MusicNote("G#3", Path.Combine(baseFolder, "G#3.wav"), midiNumber++));
+            result.Add(new MusicNote("A3", Path.Combine(baseFolder, "A3.wav"), midiNumber++));
+            result.Add(new MusicNote("A#3", Path.Combine(baseFolder, "A#3.wav"), midiNumber++));
+            result.Add(new MusicNote("B3", Path.Combine(baseFolder, "B3.wav"), midiNumber++));
+            result.Add(new MusicNote("C4", Path.Combine(baseFolder, "C4.wav"), midiNumber++));
+            result.Add(new MusicNote("C#4", Path.Combine(baseFolder, "C#4.wav"), midiNumber++));
+            result.Add(new MusicNote("D4", Path.Combine(baseFolder, "D4.wav"), midiNumber++));
+            result.Add(new MusicNote("D#4", Path.Combine(baseFolder, "D#4.wav"), midiNumber++));
+            result.Add(new MusicNote("E4", Path.Combine(baseFolder, "E4.wav"), midiNumber++));
+            result.Add(new MusicNote("F4", Path.Combine(baseFolder, "F4.wav"), midiNumber++));
+            result.Add(new MusicNote("F#4", Path.Combine(baseFolder, "F#4.wav"), midiNumber++));
+            result.Add(new MusicNote("G4", Path.Combine(baseFolder, "G4.wav"), midiNumber++));
+            result.Add(new MusicNote("G#4", Path.Combine(baseFolder, "G#4.wav"), midiNumber++));
+            result.Add(new MusicNote("A4", Path.Combine(baseFolder, "A4.wav"), midiNumber++));
+            result.Add(new MusicNote("A#4", Path.Combine(baseFolder, "A#4.wav"), midiNumber++));
+            result.Add(new MusicNote("B4", Path.Combine(baseFolder, "B4.wav"), midiNumber));
+            highestMidiNumber = midiNumber;
 
             return result;
         }
 
+        /// <summary>
+        /// Creates the chord definitions
+        /// </summary>
+        /// <returns></returns>
         private static List<PatternDefinitionChord> createAllChordDefinitions()
         {
             List<PatternDefinitionChord> result = new List<PatternDefinitionChord>();
@@ -74,6 +120,10 @@ namespace musicTeacher
             return result;
         }
 
+        /// <summary>
+        /// Creates the interval definitions
+        /// </summary>
+        /// <returns></returns>
         private static List<PatternDefinitionInterval> createAllIntervalDefinitions()
         {
             List<PatternDefinitionInterval> result = new List<PatternDefinitionInterval>();
@@ -94,12 +144,40 @@ namespace musicTeacher
             return result;
         }
 
+        /// <summary>
+        /// Create the scale definitions
+        /// </summary>
+        /// <returns></returns>
         private static List<PatternDefinitionScale> createAllScaleDefinitions()
         {
             List<PatternDefinitionScale> result = new List<PatternDefinitionScale>();
 
             result.Add(new PatternDefinitionScale("Major Scale", new List<int> { 0, 2, 4, 5, 7, 9, 11, 12 }, new List<int> { 1, 2, 3, 4, 5, 1, 2, 3 }));
             result.Add(new PatternDefinitionScale("Minor Scale", new List<int> { 0, 2, 3, 5, 7, 9, 11, 12 }, new List<int> { 1, 2, 3, 4, 5, 1, 2, 3 }));
+
+            return result;
+        }
+
+        /// <summary>
+        /// Maps computer keyboard keys to Piano notes
+        /// </summary>
+        /// <returns></returns>
+        private static Dictionary<Char, String> createPianoKeyMap()
+        {
+            Dictionary<Char, String> result = new Dictionary<Char,String>();
+
+            result.Add('a', "C");
+            result.Add('w', "C#");
+            result.Add('s', "D");
+            result.Add('e', "D#");
+            result.Add('d', "E");
+            result.Add('f', "F");
+            result.Add('t', "F#");
+            result.Add('g', "G");
+            result.Add('y', "G#");
+            result.Add('h', "A");
+            result.Add('u', "A#");
+            result.Add('j', "B");
 
             return result;
         }

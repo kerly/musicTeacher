@@ -62,6 +62,7 @@
     </Compile>
     <Compile Include="modelClasses\APatternDefinition.cs" />
     <Compile Include="modelClasses\APlayablePattern.cs" />
+    <Compile Include="modelClasses\AudioPlayer.cs" />
     <Compile Include="modelClasses\MusicChord.cs" />
     <Compile Include="utilityClasses\MusicDefinitions.cs" />
     <Compile Include="forms\FormTrainingPage.cs">
@@ -112,6 +113,44 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="audio files\Piano notes\A#2.wav" />
+    <Content Include="audio files\Piano notes\A#3.wav" />
+    <Content Include="audio files\Piano notes\A#4.wav" />
+    <Content Include="audio files\Piano notes\A2.wav" />
+    <Content Include="audio files\Piano notes\A3.wav" />
+    <Content Include="audio files\Piano notes\A4.wav" />
+    <Content Include="audio files\Piano notes\B2.wav" />
+    <Content Include="audio files\Piano notes\B3.wav" />
+    <Content Include="audio files\Piano notes\B4.wav" />
+    <Content Include="audio files\Piano notes\C#2.wav" />
+    <Content Include="audio files\Piano notes\C#3.wav" />
+    <Content Include="audio files\Piano notes\C#4.wav" />
+    <Content Include="audio files\Piano notes\C2.wav" />
+    <Content Include="audio files\Piano notes\C3.wav" />
+    <Content Include="audio files\Piano notes\C4.wav" />
+    <Content Include="audio files\Piano notes\D#2.wav" />
+    <Content Include="audio files\Piano notes\D#3.wav" />
+    <Content Include="audio files\Piano notes\D#4.wav" />
+    <Content Include="audio files\Piano notes\D2.wav" />
+    <Content Include="audio files\Piano notes\D3.wav" />
+    <Content Include="audio files\Piano notes\D4.wav" />
+    <Content Include="audio files\Piano notes\E2.wav" />
+    <Content Include="audio files\Piano notes\E3.wav" />
+    <Content Include="audio files\Piano notes\E4.wav" />
+    <Content Include="audio files\Piano notes\F#2.wav" />
+    <Content Include="audio files\Piano notes\F#3.wav" />
+    <Content Include="audio files\Piano notes\F#4.wav" />
+    <Content Include="audio files\Piano notes\F2.wav" />
+    <Content Include="audio files\Piano notes\F3.wav" />
+    <Content Include="audio files\Piano notes\F4.wav" />
+    <Content Include="audio files\Piano notes\G#2.wav" />
+    <Content Include="audio files\Piano notes\G#3.wav" />
+    <Content Include="audio files\Piano notes\G#4.wav" />
+    <Content Include="audio files\Piano notes\G2.wav" />
+    <Content Include="audio files\Piano notes\G3.wav" />
+    <Content Include="audio files\Piano notes\G4.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

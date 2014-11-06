@@ -160,6 +160,7 @@
             this.btnPianoAs4.TabIndex = 107;
             this.btnPianoAs4.Text = "A#4";
             this.btnPianoAs4.UseVisualStyleBackColor = false;
+            this.btnPianoAs4.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoGs4
             // 
@@ -172,6 +173,7 @@
             this.btnPianoGs4.TabIndex = 106;
             this.btnPianoGs4.Text = "G#4";
             this.btnPianoGs4.UseVisualStyleBackColor = false;
+            this.btnPianoGs4.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoFs4
             // 
@@ -184,6 +186,7 @@
             this.btnPianoFs4.TabIndex = 105;
             this.btnPianoFs4.Text = "F#4";
             this.btnPianoFs4.UseVisualStyleBackColor = false;
+            this.btnPianoFs4.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoDs4
             // 
@@ -196,6 +199,7 @@
             this.btnPianoDs4.TabIndex = 104;
             this.btnPianoDs4.Text = "D#4";
             this.btnPianoDs4.UseVisualStyleBackColor = false;
+            this.btnPianoDs4.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoCs4
             // 
@@ -208,6 +212,7 @@
             this.btnPianoCs4.TabIndex = 103;
             this.btnPianoCs4.Text = "C#4";
             this.btnPianoCs4.UseVisualStyleBackColor = false;
+            this.btnPianoCs4.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoB4
             // 
@@ -219,6 +224,7 @@
             this.btnPianoB4.Text = "B4";
             this.btnPianoB4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoB4.UseVisualStyleBackColor = false;
+            this.btnPianoB4.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoA4
             // 
@@ -230,6 +236,7 @@
             this.btnPianoA4.Text = "A4";
             this.btnPianoA4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoA4.UseVisualStyleBackColor = false;
+            this.btnPianoA4.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoG4
             // 
@@ -241,6 +248,7 @@
             this.btnPianoG4.Text = "G4";
             this.btnPianoG4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoG4.UseVisualStyleBackColor = false;
+            this.btnPianoG4.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoF4
             // 
@@ -252,6 +260,7 @@
             this.btnPianoF4.Text = "F4";
             this.btnPianoF4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoF4.UseVisualStyleBackColor = false;
+            this.btnPianoF4.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoE4
             // 
@@ -263,6 +272,7 @@
             this.btnPianoE4.Text = "E4";
             this.btnPianoE4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoE4.UseVisualStyleBackColor = false;
+            this.btnPianoE4.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoD4
             // 
@@ -274,6 +284,7 @@
             this.btnPianoD4.Text = "D4";
             this.btnPianoD4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoD4.UseVisualStyleBackColor = false;
+            this.btnPianoD4.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoC4
             // 
@@ -285,6 +296,7 @@
             this.btnPianoC4.Text = "C4";
             this.btnPianoC4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoC4.UseVisualStyleBackColor = false;
+            this.btnPianoC4.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoAs3
             // 
@@ -297,6 +309,7 @@
             this.btnPianoAs3.TabIndex = 95;
             this.btnPianoAs3.Text = "A#3";
             this.btnPianoAs3.UseVisualStyleBackColor = false;
+            this.btnPianoAs3.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoGs3
             // 
@@ -309,6 +322,7 @@
             this.btnPianoGs3.TabIndex = 94;
             this.btnPianoGs3.Text = "G#3";
             this.btnPianoGs3.UseVisualStyleBackColor = false;
+            this.btnPianoGs3.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoFs3
             // 
@@ -321,6 +335,7 @@
             this.btnPianoFs3.TabIndex = 93;
             this.btnPianoFs3.Text = "F#3";
             this.btnPianoFs3.UseVisualStyleBackColor = false;
+            this.btnPianoFs3.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoDs3
             // 
@@ -333,6 +348,7 @@
             this.btnPianoDs3.TabIndex = 92;
             this.btnPianoDs3.Text = "D#3";
             this.btnPianoDs3.UseVisualStyleBackColor = false;
+            this.btnPianoDs3.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoCs3
             // 
@@ -345,6 +361,7 @@
             this.btnPianoCs3.TabIndex = 91;
             this.btnPianoCs3.Text = "C#3";
             this.btnPianoCs3.UseVisualStyleBackColor = false;
+            this.btnPianoCs3.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoB3
             // 
@@ -356,6 +373,7 @@
             this.btnPianoB3.Text = "B3";
             this.btnPianoB3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoB3.UseVisualStyleBackColor = false;
+            this.btnPianoB3.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoA3
             // 
@@ -367,6 +385,7 @@
             this.btnPianoA3.Text = "A3";
             this.btnPianoA3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoA3.UseVisualStyleBackColor = false;
+            this.btnPianoA3.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoG3
             // 
@@ -378,6 +397,7 @@
             this.btnPianoG3.Text = "G3";
             this.btnPianoG3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoG3.UseVisualStyleBackColor = false;
+            this.btnPianoG3.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoF3
             // 
@@ -389,6 +409,7 @@
             this.btnPianoF3.Text = "F3";
             this.btnPianoF3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoF3.UseVisualStyleBackColor = false;
+            this.btnPianoF3.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoE3
             // 
@@ -400,6 +421,7 @@
             this.btnPianoE3.Text = "E3";
             this.btnPianoE3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoE3.UseVisualStyleBackColor = false;
+            this.btnPianoE3.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoD3
             // 
@@ -411,6 +433,7 @@
             this.btnPianoD3.Text = "D3";
             this.btnPianoD3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoD3.UseVisualStyleBackColor = false;
+            this.btnPianoD3.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoC3
             // 
@@ -422,6 +445,7 @@
             this.btnPianoC3.Text = "C3";
             this.btnPianoC3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoC3.UseVisualStyleBackColor = false;
+            this.btnPianoC3.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoAs2
             // 
@@ -434,6 +458,7 @@
             this.btnPianoAs2.TabIndex = 83;
             this.btnPianoAs2.Text = "A#2";
             this.btnPianoAs2.UseVisualStyleBackColor = false;
+            this.btnPianoAs2.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoGs2
             // 
@@ -446,6 +471,7 @@
             this.btnPianoGs2.TabIndex = 82;
             this.btnPianoGs2.Text = "G#2";
             this.btnPianoGs2.UseVisualStyleBackColor = false;
+            this.btnPianoGs2.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoFs2
             // 
@@ -458,6 +484,7 @@
             this.btnPianoFs2.TabIndex = 81;
             this.btnPianoFs2.Text = "F#2";
             this.btnPianoFs2.UseVisualStyleBackColor = false;
+            this.btnPianoFs2.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoDs2
             // 
@@ -470,6 +497,7 @@
             this.btnPianoDs2.TabIndex = 80;
             this.btnPianoDs2.Text = "D#2";
             this.btnPianoDs2.UseVisualStyleBackColor = false;
+            this.btnPianoDs2.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoCs2
             // 
@@ -482,6 +510,7 @@
             this.btnPianoCs2.TabIndex = 79;
             this.btnPianoCs2.Text = "C#2";
             this.btnPianoCs2.UseVisualStyleBackColor = false;
+            this.btnPianoCs2.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoB2
             // 
@@ -493,6 +522,7 @@
             this.btnPianoB2.Text = "B2";
             this.btnPianoB2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoB2.UseVisualStyleBackColor = false;
+            this.btnPianoB2.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoA2
             // 
@@ -504,6 +534,7 @@
             this.btnPianoA2.Text = "A2";
             this.btnPianoA2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoA2.UseVisualStyleBackColor = false;
+            this.btnPianoA2.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoG2
             // 
@@ -515,6 +546,7 @@
             this.btnPianoG2.Text = "G2";
             this.btnPianoG2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoG2.UseVisualStyleBackColor = false;
+            this.btnPianoG2.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoF2
             // 
@@ -526,6 +558,7 @@
             this.btnPianoF2.Text = "F2";
             this.btnPianoF2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoF2.UseVisualStyleBackColor = false;
+            this.btnPianoF2.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoE2
             // 
@@ -537,6 +570,7 @@
             this.btnPianoE2.Text = "E2";
             this.btnPianoE2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoE2.UseVisualStyleBackColor = false;
+            this.btnPianoE2.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoD2
             // 
@@ -548,6 +582,7 @@
             this.btnPianoD2.Text = "D2";
             this.btnPianoD2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoD2.UseVisualStyleBackColor = false;
+            this.btnPianoD2.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // btnPianoC2
             // 
@@ -559,6 +594,7 @@
             this.btnPianoC2.Text = "C2";
             this.btnPianoC2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoC2.UseVisualStyleBackColor = false;
+            this.btnPianoC2.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
             // panel1
             // 
@@ -989,9 +1025,11 @@
             this.ClientSize = new System.Drawing.Size(1236, 637);
             this.Controls.Add(this.groupBoxTrainingChoices);
             this.Controls.Add(this.pianoPanel);
+            this.KeyPreview = true;
             this.Name = "FormTrainingPage";
             this.Text = "Music Teacher";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormTrainingPage_FormClosed);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormTrainingPage_KeyPress);
             this.pianoPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

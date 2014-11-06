@@ -13,6 +13,12 @@ namespace musicTeacher
     public partial class FormTrainingPage : Form
     { 
 
+        // Public variables
+        public static int currentOctave = 3;
+
+        /// <summary>
+        /// Constructor / Initializer
+        /// </summary>
         public FormTrainingPage()
         {
             InitializeComponent();
@@ -77,6 +83,37 @@ namespace musicTeacher
         private void FormTrainingPage_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        // User events
+        /// <summary>
+        /// Play a piano note when the piano button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnPianoKeyClick(object sender, EventArgs e)
+        {
+            // Get the button instance the created this event
+            Button button = (Button)sender;
+
+            // Play the note
+            NoteFinder.PlayNoteByName(button.Text.Trim());
+        }
+
+        /// <summary>
+        /// Play a piano note when a mapped computer key is pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FormTrainingPage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            String noteName = "";
+
+            if (MusicDefinitions.pianoKeyMap.TryGetValue(e.KeyChar, out noteName))
+            {
+                noteName = noteName + currentOctave;
+                NoteFinder.PlayNoteByName(noteName);
+            }
         }
     }
 }

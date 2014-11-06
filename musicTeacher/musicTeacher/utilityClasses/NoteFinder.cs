@@ -9,6 +9,33 @@ namespace musicTeacher
 {
     static class NoteFinder
     {
+        /// <summary>
+        /// Creates a concrete instance of a pattern based on the baseNote and patternDefinition
+        /// </summary>
+        /// <param name="baseNote"></param>
+        /// <param name="patternDefinition"></param>
+        /// <returns></returns>
+        public static APlayablePattern generateConcretePattern(MusicNote baseNote, APatternDefinition patternDefinition)
+        {
+            APlayablePattern result = null;
+            
+            // Create the final end object based on patternDefinition type
+            Type type = patternDefinition.GetType();
+            if(type == typeof(PatternDefinitionChord))
+            {
+                result = new MusicChord(baseNote, (PatternDefinitionChord)patternDefinition);
+            }
+            else if (type == typeof(PatternDefinitionScale))
+            {
+                result = new MusicScale(baseNote, (PatternDefinitionScale)patternDefinition);
+            }
+            else if (type == typeof(PatternDefinitionInterval))
+            {
+                result = new MusicInterval(baseNote, (PatternDefinitionInterval)patternDefinition);
+            }
+
+            return result;
+        }
 
         /// <summary>
         /// Translates a pattern definition into a list of music notes by finding all 
@@ -26,6 +53,15 @@ namespace musicTeacher
             }
 
             return result;
+        }
+
+        public static void PlayNoteByName(String name)
+        {
+            MusicNote note = findNoteByName(name);
+            if (note != null)
+            {
+                note.Play();
+            }
         }
 
         /// <summary>
@@ -56,7 +92,7 @@ namespace musicTeacher
         /// <returns></returns>
         public static MusicNote findNoteByName(String noteName)
         {
-            return MusicDefinitions.allMusicNotes.Find(i => i.getName() == noteName);
+            return MusicDefinitions.allMusicNotes.Find(i => i.getName().Equals(noteName));
         }
 
         /// <summary>
@@ -64,9 +100,33 @@ namespace musicTeacher
         /// </summary>
         /// <param name="noteName"></param>
         /// <returns></returns>
-        public static Button findPianoButtonByNoteName(String noteName)
+        public static Button findPianoButtonByNoteName(String noteName, List<Button> buttons)
         {
-            return MusicDefinitions.allPianoButtons.Find(i => i.Text == noteName);
+            return buttons.Find(i => i.Text.Equals(noteName));
+        }
+
+        /// <summary>
+        /// Generates a pattern based on the names of the identifiers
+        /// </summary>
+        /// <param name="noteName"></param>
+        /// <param name="patternName"></param>
+        /// <returns></returns>
+        public static APlayablePattern getPatternByNames(String noteName, String patternName, List<APatternDefinition> patterns)
+        {
+            MusicNote baseNote = findNoteByName(noteName);
+            APatternDefinition definition = findPatternDefinitionByName(patternName, patterns);
+            return generateConcretePattern(baseNote, definition);
+        }
+
+        /// <summary>
+        /// Finds a pattern definition by it's name
+        /// </summary>
+        /// <param name="patternName"></param>
+        /// <param name="definitions"></param>
+        /// <returns></returns>
+        public static APatternDefinition findPatternDefinitionByName(String patternName, List<APatternDefinition> definitions)
+        {
+            return definitions.Find(i => i.getName().Equals(patternName));
         }
     }
 }
