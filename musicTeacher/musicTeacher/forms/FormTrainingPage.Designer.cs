@@ -65,7 +65,7 @@
             this.btnPianoE2 = new System.Windows.Forms.Button();
             this.btnPianoD2 = new System.Windows.Forms.Button();
             this.btnPianoC2 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelDefinitionBox = new System.Windows.Forms.Panel();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
@@ -101,7 +101,7 @@
             this.btnTabNoteC = new System.Windows.Forms.Button();
             this.groupBoxTrainingChoices = new System.Windows.Forms.GroupBox();
             this.pianoPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelDefinitionBox.SuspendLayout();
             this.panelTabNotes.SuspendLayout();
             this.groupBoxTrainingChoices.SuspendLayout();
             this.SuspendLayout();
@@ -596,32 +596,32 @@
             this.btnPianoC2.UseVisualStyleBackColor = false;
             this.btnPianoC2.Click += new System.EventHandler(this.btnPianoKeyClick);
             // 
-            // panel1
+            // panelDefinitionBox
             // 
-            this.panel1.Controls.Add(this.radioButton8);
-            this.panel1.Controls.Add(this.radioButton9);
-            this.panel1.Controls.Add(this.radioButton10);
-            this.panel1.Controls.Add(this.radioButton11);
-            this.panel1.Controls.Add(this.radioButton7);
-            this.panel1.Controls.Add(this.radioButton6);
-            this.panel1.Controls.Add(this.radioButton5);
-            this.panel1.Controls.Add(this.radioButton4);
-            this.panel1.Controls.Add(this.radioButton3);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.lblTrainingChoicesIntervals);
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.radioBtnTrainingChoicesIntervalUnison);
-            this.panel1.Controls.Add(this.lblTrainingChoicesScales);
-            this.panel1.Controls.Add(this.radioBtnTrainingChoicesScaleMinor);
-            this.panel1.Controls.Add(this.radioBtnTrainingChoicesScaleMajor);
-            this.panel1.Controls.Add(this.lblTrainingChoicesChords);
-            this.panel1.Controls.Add(this.radioBtnTrainingChoicesChordMinor);
-            this.panel1.Controls.Add(this.radioBtnTrainingChoicesChordMajor);
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(40, 35);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(697, 190);
-            this.panel1.TabIndex = 4;
+            this.panelDefinitionBox.Controls.Add(this.radioButton8);
+            this.panelDefinitionBox.Controls.Add(this.radioButton9);
+            this.panelDefinitionBox.Controls.Add(this.radioButton10);
+            this.panelDefinitionBox.Controls.Add(this.radioButton11);
+            this.panelDefinitionBox.Controls.Add(this.radioButton7);
+            this.panelDefinitionBox.Controls.Add(this.radioButton6);
+            this.panelDefinitionBox.Controls.Add(this.radioButton5);
+            this.panelDefinitionBox.Controls.Add(this.radioButton4);
+            this.panelDefinitionBox.Controls.Add(this.radioButton3);
+            this.panelDefinitionBox.Controls.Add(this.radioButton2);
+            this.panelDefinitionBox.Controls.Add(this.lblTrainingChoicesIntervals);
+            this.panelDefinitionBox.Controls.Add(this.radioButton1);
+            this.panelDefinitionBox.Controls.Add(this.radioBtnTrainingChoicesIntervalUnison);
+            this.panelDefinitionBox.Controls.Add(this.lblTrainingChoicesScales);
+            this.panelDefinitionBox.Controls.Add(this.radioBtnTrainingChoicesScaleMinor);
+            this.panelDefinitionBox.Controls.Add(this.radioBtnTrainingChoicesScaleMajor);
+            this.panelDefinitionBox.Controls.Add(this.lblTrainingChoicesChords);
+            this.panelDefinitionBox.Controls.Add(this.radioBtnTrainingChoicesChordMinor);
+            this.panelDefinitionBox.Controls.Add(this.radioBtnTrainingChoicesChordMajor);
+            this.panelDefinitionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelDefinitionBox.Location = new System.Drawing.Point(40, 35);
+            this.panelDefinitionBox.Name = "panelDefinitionBox";
+            this.panelDefinitionBox.Size = new System.Drawing.Size(697, 190);
+            this.panelDefinitionBox.TabIndex = 4;
             // 
             // radioButton8
             // 
@@ -630,7 +630,6 @@
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.Size = new System.Drawing.Size(85, 21);
             this.radioButton8.TabIndex = 21;
-            this.radioButton8.TabStop = true;
             this.radioButton8.Text = "Major 7th";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
@@ -641,7 +640,6 @@
             this.radioButton9.Name = "radioButton9";
             this.radioButton9.Size = new System.Drawing.Size(85, 21);
             this.radioButton9.TabIndex = 20;
-            this.radioButton9.TabStop = true;
             this.radioButton9.Text = "Minor 7th";
             this.radioButton9.UseVisualStyleBackColor = true;
             // 
@@ -652,7 +650,6 @@
             this.radioButton10.Name = "radioButton10";
             this.radioButton10.Size = new System.Drawing.Size(85, 21);
             this.radioButton10.TabIndex = 19;
-            this.radioButton10.TabStop = true;
             this.radioButton10.Text = "Major 6th";
             this.radioButton10.UseVisualStyleBackColor = true;
             // 
@@ -663,7 +660,6 @@
             this.radioButton11.Name = "radioButton11";
             this.radioButton11.Size = new System.Drawing.Size(85, 21);
             this.radioButton11.TabIndex = 18;
-            this.radioButton11.TabStop = true;
             this.radioButton11.Text = "Minor 6th";
             this.radioButton11.UseVisualStyleBackColor = true;
             // 
@@ -674,7 +670,6 @@
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(95, 21);
             this.radioButton7.TabIndex = 17;
-            this.radioButton7.TabStop = true;
             this.radioButton7.Text = "Perfect 5th";
             this.radioButton7.UseVisualStyleBackColor = true;
             // 
@@ -685,7 +680,6 @@
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(71, 21);
             this.radioButton6.TabIndex = 16;
-            this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Tritone";
             this.radioButton6.UseVisualStyleBackColor = true;
             // 
@@ -696,7 +690,6 @@
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(95, 21);
             this.radioButton5.TabIndex = 15;
-            this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Perfect 4th";
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
@@ -707,7 +700,6 @@
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(86, 21);
             this.radioButton4.TabIndex = 14;
-            this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Major 3rd";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
@@ -718,7 +710,6 @@
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(86, 21);
             this.radioButton3.TabIndex = 13;
-            this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Minor 3rd";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
@@ -729,7 +720,6 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(89, 21);
             this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Major 2nd";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
@@ -750,7 +740,6 @@
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(89, 21);
             this.radioButton1.TabIndex = 10;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Minor 2nd";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
@@ -761,7 +750,6 @@
             this.radioBtnTrainingChoicesIntervalUnison.Name = "radioBtnTrainingChoicesIntervalUnison";
             this.radioBtnTrainingChoicesIntervalUnison.Size = new System.Drawing.Size(71, 21);
             this.radioBtnTrainingChoicesIntervalUnison.TabIndex = 9;
-            this.radioBtnTrainingChoicesIntervalUnison.TabStop = true;
             this.radioBtnTrainingChoicesIntervalUnison.Text = "Octave";
             this.radioBtnTrainingChoicesIntervalUnison.UseVisualStyleBackColor = true;
             // 
@@ -782,7 +770,6 @@
             this.radioBtnTrainingChoicesScaleMinor.Name = "radioBtnTrainingChoicesScaleMinor";
             this.radioBtnTrainingChoicesScaleMinor.Size = new System.Drawing.Size(100, 21);
             this.radioBtnTrainingChoicesScaleMinor.TabIndex = 7;
-            this.radioBtnTrainingChoicesScaleMinor.TabStop = true;
             this.radioBtnTrainingChoicesScaleMinor.Text = "Minor Scale";
             this.radioBtnTrainingChoicesScaleMinor.UseVisualStyleBackColor = true;
             // 
@@ -793,7 +780,6 @@
             this.radioBtnTrainingChoicesScaleMajor.Name = "radioBtnTrainingChoicesScaleMajor";
             this.radioBtnTrainingChoicesScaleMajor.Size = new System.Drawing.Size(100, 21);
             this.radioBtnTrainingChoicesScaleMajor.TabIndex = 6;
-            this.radioBtnTrainingChoicesScaleMajor.TabStop = true;
             this.radioBtnTrainingChoicesScaleMajor.Text = "Major Scale";
             this.radioBtnTrainingChoicesScaleMajor.UseVisualStyleBackColor = true;
             // 
@@ -814,13 +800,13 @@
             this.radioBtnTrainingChoicesChordMinor.Name = "radioBtnTrainingChoicesChordMinor";
             this.radioBtnTrainingChoicesChordMinor.Size = new System.Drawing.Size(103, 21);
             this.radioBtnTrainingChoicesChordMinor.TabIndex = 4;
-            this.radioBtnTrainingChoicesChordMinor.TabStop = true;
             this.radioBtnTrainingChoicesChordMinor.Text = "Minor Chord";
             this.radioBtnTrainingChoicesChordMinor.UseVisualStyleBackColor = true;
             // 
             // radioBtnTrainingChoicesChordMajor
             // 
             this.radioBtnTrainingChoicesChordMajor.AutoSize = true;
+            this.radioBtnTrainingChoicesChordMajor.Checked = true;
             this.radioBtnTrainingChoicesChordMajor.Location = new System.Drawing.Point(17, 48);
             this.radioBtnTrainingChoicesChordMajor.Name = "radioBtnTrainingChoicesChordMajor";
             this.radioBtnTrainingChoicesChordMajor.Size = new System.Drawing.Size(103, 21);
@@ -861,6 +847,7 @@
             this.btnTabNoteRandom.TabIndex = 12;
             this.btnTabNoteRandom.Text = "Random";
             this.btnTabNoteRandom.UseVisualStyleBackColor = true;
+            this.btnTabNoteRandom.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTrainingNoteClick);
             // 
             // btnTabNoteB
             // 
@@ -873,6 +860,7 @@
             this.btnTabNoteB.TabIndex = 11;
             this.btnTabNoteB.Text = " B ";
             this.btnTabNoteB.UseVisualStyleBackColor = true;
+            this.btnTabNoteB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTrainingNoteClick);
             // 
             // btnTabNoteAs
             // 
@@ -885,6 +873,7 @@
             this.btnTabNoteAs.TabIndex = 10;
             this.btnTabNoteAs.Text = " A#";
             this.btnTabNoteAs.UseVisualStyleBackColor = true;
+            this.btnTabNoteAs.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTrainingNoteClick);
             // 
             // btnTabNoteA
             // 
@@ -897,6 +886,7 @@
             this.btnTabNoteA.TabIndex = 9;
             this.btnTabNoteA.Text = " A ";
             this.btnTabNoteA.UseVisualStyleBackColor = true;
+            this.btnTabNoteA.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTrainingNoteClick);
             // 
             // btnTabNoteGs
             // 
@@ -909,6 +899,7 @@
             this.btnTabNoteGs.TabIndex = 8;
             this.btnTabNoteGs.Text = " G#";
             this.btnTabNoteGs.UseVisualStyleBackColor = true;
+            this.btnTabNoteGs.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTrainingNoteClick);
             // 
             // btnTabNoteG
             // 
@@ -921,6 +912,7 @@
             this.btnTabNoteG.TabIndex = 7;
             this.btnTabNoteG.Text = " G ";
             this.btnTabNoteG.UseVisualStyleBackColor = true;
+            this.btnTabNoteG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTrainingNoteClick);
             // 
             // btnTabNoteFs
             // 
@@ -933,6 +925,7 @@
             this.btnTabNoteFs.TabIndex = 6;
             this.btnTabNoteFs.Text = " F#";
             this.btnTabNoteFs.UseVisualStyleBackColor = true;
+            this.btnTabNoteFs.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTrainingNoteClick);
             // 
             // btnTabNoteF
             // 
@@ -945,6 +938,7 @@
             this.btnTabNoteF.TabIndex = 5;
             this.btnTabNoteF.Text = " F ";
             this.btnTabNoteF.UseVisualStyleBackColor = true;
+            this.btnTabNoteF.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTrainingNoteClick);
             // 
             // btnTabNoteE
             // 
@@ -957,6 +951,7 @@
             this.btnTabNoteE.TabIndex = 4;
             this.btnTabNoteE.Text = " E ";
             this.btnTabNoteE.UseVisualStyleBackColor = true;
+            this.btnTabNoteE.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTrainingNoteClick);
             // 
             // btnTabNoteDs
             // 
@@ -969,6 +964,7 @@
             this.btnTabNoteDs.TabIndex = 3;
             this.btnTabNoteDs.Text = " D#";
             this.btnTabNoteDs.UseVisualStyleBackColor = true;
+            this.btnTabNoteDs.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTrainingNoteClick);
             // 
             // btnTabNoteD
             // 
@@ -981,6 +977,7 @@
             this.btnTabNoteD.TabIndex = 2;
             this.btnTabNoteD.Text = " D ";
             this.btnTabNoteD.UseVisualStyleBackColor = true;
+            this.btnTabNoteD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTrainingNoteClick);
             // 
             // btnTabNoteCs
             // 
@@ -993,6 +990,7 @@
             this.btnTabNoteCs.TabIndex = 1;
             this.btnTabNoteCs.Text = " C#";
             this.btnTabNoteCs.UseVisualStyleBackColor = true;
+            this.btnTabNoteCs.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTrainingNoteClick);
             // 
             // btnTabNoteC
             // 
@@ -1005,10 +1003,11 @@
             this.btnTabNoteC.TabIndex = 0;
             this.btnTabNoteC.Text = " C ";
             this.btnTabNoteC.UseVisualStyleBackColor = true;
+            this.btnTabNoteC.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTrainingNoteClick);
             // 
             // groupBoxTrainingChoices
             // 
-            this.groupBoxTrainingChoices.Controls.Add(this.panel1);
+            this.groupBoxTrainingChoices.Controls.Add(this.panelDefinitionBox);
             this.groupBoxTrainingChoices.Controls.Add(this.panelTabNotes);
             this.groupBoxTrainingChoices.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTrainingChoices.Location = new System.Drawing.Point(179, 269);
@@ -1031,8 +1030,8 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormTrainingPage_FormClosed);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormTrainingPage_KeyPress);
             this.pianoPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelDefinitionBox.ResumeLayout(false);
+            this.panelDefinitionBox.PerformLayout();
             this.panelTabNotes.ResumeLayout(false);
             this.panelTabNotes.PerformLayout();
             this.groupBoxTrainingChoices.ResumeLayout(false);
@@ -1093,7 +1092,7 @@
         private System.Windows.Forms.Button btnTabNoteD;
         private System.Windows.Forms.Button btnTabNoteCs;
         private System.Windows.Forms.Button btnTabNoteC;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelDefinitionBox;
         private System.Windows.Forms.RadioButton radioBtnTrainingChoicesChordMajor;
         private System.Windows.Forms.RadioButton radioBtnTrainingChoicesChordMinor;
         private System.Windows.Forms.Label lblTrainingChoicesScales;

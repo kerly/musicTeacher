@@ -17,7 +17,10 @@ namespace musicTeacher
         // Abstract override
         public override void Play()
         {
-
+            foreach (MusicNote note in getNotes())
+            {
+                note.Play();
+            }
         }
     }
 }
