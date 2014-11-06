@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTrainingPage));
             this.pianoPanel = new System.Windows.Forms.Panel();
             this.btnPianoAs4 = new System.Windows.Forms.Button();
             this.btnPianoGs4 = new System.Windows.Forms.Button();
@@ -100,6 +101,8 @@
             this.btnTabNoteCs = new System.Windows.Forms.Button();
             this.btnTabNoteC = new System.Windows.Forms.Button();
             this.groupBoxTrainingChoices = new System.Windows.Forms.GroupBox();
+            this.hidePiano = new System.Windows.Forms.CheckBox();
+            this.hideLabels = new System.Windows.Forms.CheckBox();
             this.pianoPanel.SuspendLayout();
             this.panelDefinitionBox.SuspendLayout();
             this.panelTabNotes.SuspendLayout();
@@ -1017,11 +1020,41 @@
             this.groupBoxTrainingChoices.TabStop = false;
             this.groupBoxTrainingChoices.Text = "Training Choices";
             // 
+            // hidePiano
+            // 
+            this.hidePiano.AutoSize = true;
+            this.hidePiano.BackColor = System.Drawing.Color.Transparent;
+            this.hidePiano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hidePiano.Location = new System.Drawing.Point(986, 30);
+            this.hidePiano.Name = "hidePiano";
+            this.hidePiano.Size = new System.Drawing.Size(94, 20);
+            this.hidePiano.TabIndex = 74;
+            this.hidePiano.Text = "Hide Piano";
+            this.hidePiano.UseVisualStyleBackColor = false;
+            this.hidePiano.CheckedChanged += new System.EventHandler(this.hidePiano_CheckedChanged);
+            // 
+            // hideLabels
+            // 
+            this.hideLabels.AutoSize = true;
+            this.hideLabels.BackColor = System.Drawing.Color.Transparent;
+            this.hideLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hideLabels.Location = new System.Drawing.Point(986, 53);
+            this.hideLabels.Name = "hideLabels";
+            this.hideLabels.Size = new System.Drawing.Size(100, 20);
+            this.hideLabels.TabIndex = 75;
+            this.hideLabels.Text = "Hide Labels";
+            this.hideLabels.UseVisualStyleBackColor = false;
+            this.hideLabels.CheckedChanged += new System.EventHandler(this.hideLabels_CheckedChanged);
+            // 
             // FormTrainingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1236, 637);
+            this.Controls.Add(this.hideLabels);
+            this.Controls.Add(this.hidePiano);
             this.Controls.Add(this.groupBoxTrainingChoices);
             this.Controls.Add(this.pianoPanel);
             this.KeyPreview = true;
@@ -1036,6 +1069,7 @@
             this.panelTabNotes.PerformLayout();
             this.groupBoxTrainingChoices.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1113,6 +1147,8 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.CheckBox hidePiano;
+        private System.Windows.Forms.CheckBox hideLabels;
     }
 }
 

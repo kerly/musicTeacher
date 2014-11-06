@@ -15,6 +15,7 @@ namespace musicTeacher
 
         // Public variables
         public static int currentOctave = 3;
+        public static String[] keyText = null;
 
         /// <summary>
         /// Constructor / Initializer
@@ -30,6 +31,7 @@ namespace musicTeacher
             MusicDefinitions.allScaleButtons = getAllScaleButtons();
             MusicDefinitions.allIntervalButtons = getAllIntervalButtons();
             MusicDefinitions.initDefinitions();
+            keyText = getKeyText();
         }
 
         /// <summary>
@@ -80,6 +82,15 @@ namespace musicTeacher
             List<Button> result = new List<Button>();
 
             return result;
+        }
+
+        //Method to store the labels on the piano keys
+        public String [] getKeyText()
+        {
+            String[] keyText = new String[36];
+            for (int i = 0; i < 36; i++)
+                keyText[i] = MusicDefinitions.allPianoButtons[i].Text;
+            return keyText;
         }
 
         private void FormTrainingPage_FormClosed(object sender, FormClosedEventArgs e)
@@ -169,6 +180,25 @@ namespace musicTeacher
                 concretePattern.Play();
             }
             
+        }
+        // Hide the piano 
+        private void hidePiano_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pianoPanel.Visible == true)
+                pianoPanel.Visible = false;
+            else
+                pianoPanel.Visible = true;
+        }
+        //Hide labels on the piano
+        private void hideLabels_CheckedChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < MusicDefinitions.allPianoButtons.Count; i++)
+            {
+                if (MusicDefinitions.allPianoButtons[i].Text != "")
+                    MusicDefinitions.allPianoButtons[i].Text = "";
+                else
+                    MusicDefinitions.allPianoButtons[i].Text = keyText[i];
+            }
         }
     }
 }
