@@ -51,10 +51,12 @@ namespace musicTeacher
 
         private List<Button> getAllNoteChoiceButtons()
         {
-            Button[] noteChoiceButtons = new Button[MusicDefinitions.NUM_OF_NOTES + 1] { 
+            Button[] noteChoiceButtons = new Button[MusicDefinitions.NUM_OF_NOTES + 1] 
+            { 
                 btnTabNoteC, btnTabNoteCs, btnTabNoteD, btnTabNoteDs, btnTabNoteE, btnTabNoteF,
                 btnTabNoteFs, btnTabNoteG, btnTabNoteGs, btnTabNoteA, btnTabNoteAs, btnTabNoteB,
-                btnTabNoteRandom};
+                btnTabNoteRandom
+            };
 
             return new List<Button>(noteChoiceButtons);
         }
@@ -126,10 +128,6 @@ namespace musicTeacher
             // Get the button instance that created this event
             Button button = (Button)sender;
 
-            // Find the base note for the selected button
-            String noteName = button.Text.Trim() + currentOctave;
-            MusicNote baseNote = NoteFinder.findNoteByName(noteName);
-
             // Find the pattern definition by the selected radio button
             RadioButton checkedBox = panelDefinitionBox.Controls.OfType<RadioButton>()
                 .FirstOrDefault(r => r.Checked);
@@ -137,20 +135,31 @@ namespace musicTeacher
 
             // Find which kind of pattern definition this button references
             APatternDefinition definition = null;
+            List<APatternDefinition> parentList = null;
             if (patternName.Contains("Chord"))
             {
-                List<APatternDefinition> parentList = MusicDefinitions.allChordDefinitions.Cast<APatternDefinition>().ToList();
-                definition = NoteFinder.findPatternDefinitionByName(checkedBox.Text, parentList);
+                parentList = MusicDefinitions.allChordDefinitions.Cast<APatternDefinition>().ToList();
             }
             else if (patternName.Contains("Scale"))
             {
-                List<APatternDefinition> parentList = MusicDefinitions.allScaleDefinitions.Cast<APatternDefinition>().ToList();
-                definition = NoteFinder.findPatternDefinitionByName(checkedBox.Text, parentList);
+                parentList = MusicDefinitions.allScaleDefinitions.Cast<APatternDefinition>().ToList();
             }
             else if (patternName.Contains("Interval"))
             {
-                List<APatternDefinition> parentList = MusicDefinitions.allIntervalDefinitions.Cast<APatternDefinition>().ToList();
-                definition = NoteFinder.findPatternDefinitionByName(checkedBox.Text, parentList);
+                parentList = MusicDefinitions.allIntervalDefinitions.Cast<APatternDefinition>().ToList();
+            }
+            definition = NoteFinder.findPatternDefinitionByName(checkedBox.Text, parentList);
+
+            // Find the base note for the selected button
+            String noteName = button.Text.Trim();
+            MusicNote baseNote = null;
+            if (noteName.Equals("Random"))
+            {
+                baseNote = NoteFinder.getRandomNoteInBoundsForOctave(definition, currentOctave);
+            }
+            else
+            {
+                baseNote = NoteFinder.findNoteByName(noteName + currentOctave);
             }
             
             // Get the concrete pattern for the selected radio button and base note
