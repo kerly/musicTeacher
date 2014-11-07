@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace musicTeacher
 {
 
-    class MusicNote
+    public class MusicNote
     {
 
         // Variables

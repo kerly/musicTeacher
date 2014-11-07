@@ -100,9 +100,9 @@ namespace musicTeacher
         /// </summary>
         /// <param name="noteName"></param>
         /// <returns></returns>
-        public static Button findPianoButtonByNoteName(String noteName, List<Button> buttons)
+        public static Button findPianoButtonByNoteName(String noteName, List<String> noteNames, List<Button> buttons)
         {
-            return buttons.Find(i => i.Text.Equals(noteName));
+            return buttons.ElementAt(noteNames.IndexOf(noteName));
         }
 
         /// <summary>

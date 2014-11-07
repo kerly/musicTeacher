@@ -30,11 +30,6 @@ namespace musicTeacher
         // Static variables
         public static int lowestMidiNumber;
         public static int highestMidiNumber;
-        public static List<Button> allPianoButtons;
-        public static List<Button> allNoteChoiceButtons;
-        public static List<Button> allChordButtons;
-        public static List<Button> allScaleButtons;
-        public static List<Button> allIntervalButtons;
         public static List<MusicNote> allMusicNotes;
         public static List<PatternDefinitionChord> allChordDefinitions;
         public static List<PatternDefinitionScale> allScaleDefinitions;

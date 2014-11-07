@@ -12,12 +12,7 @@ namespace musicTeacher
         public MusicScale(MusicNote baseNote, PatternDefinitionScale patternDefinition) :
             base(baseNote, patternDefinition)
         {
-        }
-
-        // Abstract override
-        public override void Play()
-        {
-            
+            this.timeBetweenNotes = 1000;
         }
     }
 }

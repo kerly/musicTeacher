@@ -12,15 +12,8 @@ namespace musicTeacher
         public MusicChord(MusicNote baseNote, PatternDefinitionChord patternDefinition) :
             base(baseNote, patternDefinition)
         {
+            this.timeBetweenNotes = 250;
         }
 
-        // Abstract override
-        public override void Play()
-        {
-            foreach (MusicNote note in getNotes())
-            {
-                note.Play();
-            }
-        }
     }
 }
