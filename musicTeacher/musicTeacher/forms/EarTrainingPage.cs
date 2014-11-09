@@ -34,11 +34,6 @@ namespace musicTeacher.forms
             // generatingList(); 
 
             // Initialize the applications definitions
-            MusicDefinitions.allPianoButtons = getAllPianoButtons();
-            MusicDefinitions.allNoteChoiceButtons = getAllNoteChoiceButtons();
-            MusicDefinitions.allChordButtons = getAllChordButtons();
-            MusicDefinitions.allScaleButtons = getAllScaleButtons();
-            MusicDefinitions.allIntervalButtons = getAllIntervalButtons();
             MusicDefinitions.initDefinitions();
             RandomAudio();
         }

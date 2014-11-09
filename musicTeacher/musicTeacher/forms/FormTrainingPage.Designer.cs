@@ -1057,7 +1057,6 @@
             this.Controls.Add(this.hidePiano);
             this.Controls.Add(this.groupBoxTrainingChoices);
             this.Controls.Add(this.pianoPanel);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "FormTrainingPage";
             this.Text = "Music Teacher";
@@ -1152,4 +1151,3 @@
         private System.Windows.Forms.CheckBox hideLabels;
     }
 }
-

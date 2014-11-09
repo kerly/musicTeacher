@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Diagnostics;
 
 namespace musicTeacher
 {
     public partial class FormTrainingPage : Form
-    { 
+    {
+        // Constants
+        private const int _NOTE_REMAIN_TIME = 500;
+        private const int _PATTERN_REMAIN_TIME = 3000;
 
         // Public variables
         public static int currentOctave = 3;
+
+        // Private variables
+        private static bool isPlayingPattern = false;
+        private static List<String> keyTextList = null;
+        private static List<Button> allPianoButtons = null;
 
         /// <summary>
         /// Constructor / Initializer
@@ -24,12 +34,22 @@ namespace musicTeacher
             InitializeComponent();
 
             // Initialize the applications definitions
-            MusicDefinitions.allPianoButtons = getAllPianoButtons();
-            MusicDefinitions.allNoteChoiceButtons = getAllNoteChoiceButtons();
-            MusicDefinitions.allChordButtons = getAllChordButtons();
-            MusicDefinitions.allScaleButtons = getAllScaleButtons();
-            MusicDefinitions.allIntervalButtons = getAllIntervalButtons();
+            allPianoButtons = getAllPianoButtons();
+            keyTextList = getKeyText();
             MusicDefinitions.initDefinitions();
+
+            // Audio Player
+            MusicDefinitions.allMusicNotes.ElementAt(0).Play();
+        }
+
+        /// <summary>
+        /// Exit the Application (automatic)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FormTrainingPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         /// <summary>
@@ -49,40 +69,20 @@ namespace musicTeacher
             return new List<Button>(pianoButtons);
         }
 
-        private List<Button> getAllNoteChoiceButtons()
+        /// <summary>
+        /// Method to store the labels of the piano keys
+        /// </summary>
+        /// <returns></returns>
+        public List<String> getKeyText()
         {
-            Button[] noteChoiceButtons = new Button[MusicDefinitions.NUM_OF_NOTES + 1] { 
-                btnTabNoteC, btnTabNoteCs, btnTabNoteD, btnTabNoteDs, btnTabNoteE, btnTabNoteF,
-                btnTabNoteFs, btnTabNoteG, btnTabNoteGs, btnTabNoteA, btnTabNoteAs, btnTabNoteB,
-                btnTabNoteRandom};
+            String[] keyText = new String[36];
 
-            return new List<Button>(noteChoiceButtons);
-        }
+            for (int i = 0; i < 36; i++)
+            {
+                keyText[i] = allPianoButtons[i].Text;
+            }
 
-        private List<Button> getAllChordButtons()
-        {
-            List<Button> result = new List<Button>();
-
-            return result;
-        }
-
-        private List<Button> getAllScaleButtons()
-        {
-            List<Button> result = new List<Button>();
-
-            return result;
-        }
-
-        private List<Button> getAllIntervalButtons()
-        {
-            List<Button> result = new List<Button>();
-
-            return result;
-        }
-
-        private void FormTrainingPage_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
+            return new List<String>(keyText);
         }
 
         // User events
@@ -93,11 +93,17 @@ namespace musicTeacher
         /// <param name="e"></param>
         private void btnPianoKeyClick(object sender, EventArgs e)
         {
-            // Get the button instance that created this event
-            Button button = (Button)sender;
+            if (isPlayingPattern == false)
+            {
+                // Get the button instance that created this event
+                Button button = (Button)sender;
 
-            // Play the note
-            NoteFinder.PlayNoteByName(button.Text.Trim());
+                // Play the note
+                Thread playNoteThread = new Thread(() => PlayNoteOnPiano(
+                    MusicDefinitions.allMusicNotes.ElementAt(allPianoButtons.IndexOf(button)),
+                    _NOTE_REMAIN_TIME));
+                playNoteThread.Start();
+            }
         }
 
         /// <summary>
@@ -109,13 +115,18 @@ namespace musicTeacher
         {
             String noteName = "";
 
-            if (MusicDefinitions.pianoKeyMap.TryGetValue(e.KeyChar, out noteName))
+            if (isPlayingPattern == false)
             {
-                noteName = noteName + currentOctave;
-                NoteFinder.PlayNoteByName(noteName);
+                if (MusicDefinitions.pianoKeyMap.TryGetValue(e.KeyChar, out noteName))
+                {
+                    noteName = noteName + currentOctave;
+                    Thread playNoteThread = new Thread(() =>
+                        PlayNoteOnPiano(NoteFinder.findNoteByName(noteName), _NOTE_REMAIN_TIME));
+                    playNoteThread.Start();
+                }
             }
         }
-        
+
         /// <summary>
         /// Play a pattern when a base note is pressed and a radio button is selected
         /// </summary>
@@ -123,44 +134,173 @@ namespace musicTeacher
         /// <param name="e"></param>
         private void btnTrainingNoteClick(object sender, MouseEventArgs e)
         {
-            // Get the button instance that created this event
-            Button button = (Button)sender;
-             
-            // Find the base note for the selected button
-            String noteName = button.Text.Trim() + currentOctave;
-            MusicNote baseNote = NoteFinder.findNoteByName(noteName);
+            // Check to make sure a pattern isnt already playing
+            if (isPlayingPattern == false)
+            {
+                // Get the button instance that created this event
+                Button button = (Button)sender;
 
-            // Find the pattern definition by the selected radio button
-            RadioButton checkedBox = panelDefinitionBox.Controls.OfType<RadioButton>()
-                .FirstOrDefault(r => r.Checked);
-            String patternName = checkedBox.Text.Trim();
+                // Find the pattern definition by the selected radio button
+                RadioButton checkedBox = panelDefinitionBox.Controls.OfType<RadioButton>()
+                    .FirstOrDefault(r => r.Checked);
+                String patternName = checkedBox.Text.Trim();
 
-            // Find which kind of pattern definition this button references
-            APatternDefinition definition = null;
-            if (patternName.Contains("Chord"))
-            {
-                List<APatternDefinition> parentList = MusicDefinitions.allChordDefinitions.Cast<APatternDefinition>().ToList();
+                // Find which kind of pattern definition this button references
+                APatternDefinition definition = null;
+                List<APatternDefinition> parentList = null;
+                if (patternName.Contains("Chord"))
+                {
+                    parentList = MusicDefinitions.allChordDefinitions.Cast<APatternDefinition>().ToList();
+                }
+                else if (patternName.Contains("Scale"))
+                {
+                    parentList = MusicDefinitions.allScaleDefinitions.Cast<APatternDefinition>().ToList();
+                }
+                else
+                {
+                    parentList = MusicDefinitions.allIntervalDefinitions.Cast<APatternDefinition>().ToList();
+                }
                 definition = NoteFinder.findPatternDefinitionByName(checkedBox.Text, parentList);
+
+                // Find the base note for the selected button
+                String noteName = button.Text.Trim();
+                MusicNote baseNote = null;
+                if (noteName.Equals("Random"))
+                {
+                    baseNote = NoteFinder.getRandomNoteInBoundsForOctave(definition, currentOctave);
+                }
+                else
+                {
+                    baseNote = NoteFinder.findNoteByName(noteName + currentOctave);
+                }
+
+                // Get the concrete pattern for the selected radio button and base note
+                APlayablePattern concretePattern = NoteFinder.generateConcretePattern(baseNote, definition);
+                if (concretePattern != null)
+                {
+                    Thread playPianoThread = new Thread(() => PlayPatternOnPiano(concretePattern));
+                    playPianoThread.Start();
+                }
             }
-            else if (patternName.Contains("Scale"))
-            {
-                List<APatternDefinition> parentList = MusicDefinitions.allScaleDefinitions.Cast<APatternDefinition>().ToList();
-                definition = NoteFinder.findPatternDefinitionByName(checkedBox.Text, parentList);
-            }
-            else if (patternName.Contains("Interval"))
-            {
-                List<APatternDefinition> parentList = MusicDefinitions.allIntervalDefinitions.Cast<APatternDefinition>().ToList();
-                definition = NoteFinder.findPatternDefinitionByName(checkedBox.Text, parentList);
-            }
-            
-            // Get the concrete pattern for the selected radio button and base note
-            APlayablePattern concretePattern = NoteFinder.generateConcretePattern(baseNote, definition);
-            if (concretePattern != null)
-            {
-                concretePattern.Play();
-            }
-            
+
         }
 
+        /// <summary>
+        /// Hide the piano 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void hidePiano_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pianoPanel.Visible == true)
+            {
+                pianoPanel.Visible = false;
+            }
+            else
+            {
+                pianoPanel.Visible = true;
+            }
+        }
+
+        /// <summary>
+        /// Hide labels on the piano
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void hideLabels_CheckedChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < allPianoButtons.Count; i++)
+            {
+                if (allPianoButtons[i].Text != "")
+                {
+                    allPianoButtons[i].Text = "";
+                }
+                else
+                {
+                    allPianoButtons[i].Text = keyTextList[i];
+                }
+            }
+        }
+
+        /// <summary>
+        /// Plays a pattern on the Piano as well as the audio files for each note in the pattern
+        /// </summary>
+        /// <param name="pattern"></param>
+        private void PlayPatternOnPiano(APlayablePattern pattern)
+        {
+            // Set a global variable so other audio sources won't be played
+            isPlayingPattern = true;
+
+            // Loop through the notes displaying and playing each one
+            List<Button> pianoButtons = new List<Button>();
+            int waitTime = pattern.getTimeBetweenNotes();
+            foreach (MusicNote note in pattern.getNotes())
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                Button button = NoteFinder.findPianoButtonByNoteName(note.getName(), keyTextList, allPianoButtons);
+                pianoButtons.Add(button);
+                button.BackColor = Color.LightSkyBlue;
+                note.Play();
+
+                // Start the watch and wait until the time is up
+                stopWatch.Start();
+                while (stopWatch.Elapsed.TotalMilliseconds < waitTime)
+                {
+                    // wait
+                }
+                stopWatch.Stop();
+            }
+
+            // Wait a while longer before turning the keys back to their original color
+            Stopwatch secondWatch = new Stopwatch();
+            secondWatch.Start();
+            while (secondWatch.Elapsed.TotalMilliseconds < _PATTERN_REMAIN_TIME)
+            {
+                // wait
+            }
+            secondWatch.Stop();
+
+            // Set all the piano buttons back to their original color
+            foreach (Button button in pianoButtons)
+            {
+                if (button.Name.Contains("s"))
+                {
+                    button.BackColor = Color.Black;
+                }
+                else
+                {
+                    button.BackColor = Color.White;
+                }
+            }
+
+            // Reset the global variable so a new instance of this method can be called
+            isPlayingPattern = false;
+        }
+
+        private static void PlayNoteOnPiano(MusicNote note, int colorTime)
+        {
+            Stopwatch stopWatch = new Stopwatch();
+            Button button = NoteFinder.findPianoButtonByNoteName(note.getName(), keyTextList, allPianoButtons);
+            button.BackColor = Color.LightSkyBlue;
+            note.Play();
+
+            // Start the watch and wait until the time is up
+            stopWatch.Start();
+            while (stopWatch.Elapsed.TotalMilliseconds < colorTime)
+            {
+                // wait
+            }
+            stopWatch.Stop();
+
+            // Set the piano button back to it's original color
+            if (button.Name.Contains("s"))
+            {
+                button.BackColor = Color.Black;
+            }
+            else
+            {
+                button.BackColor = Color.White;
+            }
+        }
     }
 }
