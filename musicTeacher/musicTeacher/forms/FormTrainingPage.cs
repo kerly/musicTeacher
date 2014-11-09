@@ -115,7 +115,7 @@ namespace musicTeacher
                 NoteFinder.PlayNoteByName(noteName);
             }
         }
-
+        
         /// <summary>
         /// Play a pattern when a base note is pressed and a radio button is selected
         /// </summary>
@@ -125,7 +125,7 @@ namespace musicTeacher
         {
             // Get the button instance that created this event
             Button button = (Button)sender;
-
+             
             // Find the base note for the selected button
             String noteName = button.Text.Trim() + currentOctave;
             MusicNote baseNote = NoteFinder.findNoteByName(noteName);
@@ -161,5 +161,6 @@ namespace musicTeacher
             }
             
         }
+
     }
 }

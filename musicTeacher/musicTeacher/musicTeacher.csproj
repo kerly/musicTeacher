@@ -64,6 +64,11 @@
     <Compile Include="modelClasses\APlayablePattern.cs" />
     <Compile Include="modelClasses\AudioPlayer.cs" />
     <Compile Include="modelClasses\MusicChord.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="utilityClasses\MusicDefinitions.cs" />
     <Compile Include="forms\FormTrainingPage.cs">
       <SubType>Form</SubType>
@@ -91,13 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -151,6 +152,12 @@
     <Content Include="audio files\Piano notes\G2.wav" />
     <Content Include="audio files\Piano notes\G3.wav" />
     <Content Include="audio files\Piano notes\G4.wav" />
+    <Content Include="images\1415344512_34124.ico" />
+    <Content Include="images\1415438860_audio-volume-medium-panel.png" />
+    <Content Include="images\26722-huntington-piano-1920x1080-music-wallpaper.jpg" />
+    <Content Include="images\musical-notes-gif-musicnotes.gif" />
+    <Content Include="images\Treble Clef &amp; Notes.PE0389.gif" />
+    <Content Include="images\white_background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

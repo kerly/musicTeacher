@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTrainingPage));
             this.pianoPanel = new System.Windows.Forms.Panel();
             this.btnPianoAs4 = new System.Windows.Forms.Button();
             this.btnPianoGs4 = new System.Windows.Forms.Button();
@@ -1024,6 +1025,7 @@
             this.ClientSize = new System.Drawing.Size(1236, 637);
             this.Controls.Add(this.groupBoxTrainingChoices);
             this.Controls.Add(this.pianoPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "FormTrainingPage";
             this.Text = "Music Teacher";

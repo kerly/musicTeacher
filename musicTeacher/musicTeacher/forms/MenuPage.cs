@@ -29,5 +29,13 @@ namespace musicTeacher.forms
         {
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            EarTrainingPage eartrainingpage = new EarTrainingPage();
+            this.Hide();
+            eartrainingpage.Show(); 
+        }
+
     }
 }
