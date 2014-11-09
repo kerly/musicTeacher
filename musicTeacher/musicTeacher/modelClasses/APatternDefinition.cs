@@ -10,7 +10,7 @@ namespace musicTeacher
     /// The abstract class APatternDefinition is used to define 
     /// a pattern definition's structure.
     /// </summary>
-    abstract class APatternDefinition
+    public abstract class APatternDefinition
     {
         // Variables
         private String name;

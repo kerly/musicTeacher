@@ -30,11 +30,6 @@ namespace musicTeacher
         // Static variables
         public static int lowestMidiNumber;
         public static int highestMidiNumber;
-        public static List<Button> allPianoButtons;
-        public static List<Button> allNoteChoiceButtons;
-        public static List<Button> allChordButtons;
-        public static List<Button> allScaleButtons;
-        public static List<Button> allIntervalButtons;
         public static List<MusicNote> allMusicNotes;
         public static List<PatternDefinitionChord> allChordDefinitions;
         public static List<PatternDefinitionScale> allScaleDefinitions;
@@ -153,7 +148,7 @@ namespace musicTeacher
             List<PatternDefinitionScale> result = new List<PatternDefinitionScale>();
 
             result.Add(new PatternDefinitionScale("Major Scale", new List<int> { 0, 2, 4, 5, 7, 9, 11, 12 }, new List<int> { 1, 2, 3, 4, 5, 1, 2, 3 }));
-            result.Add(new PatternDefinitionScale("Minor Scale", new List<int> { 0, 2, 3, 5, 7, 9, 11, 12 }, new List<int> { 1, 2, 3, 4, 5, 1, 2, 3 }));
+            result.Add(new PatternDefinitionScale("Minor Scale", new List<int> { 0, 2, 3, 5, 7, 8, 10, 12 }, new List<int> { 1, 2, 3, 4, 5, 1, 2, 3 }));
 
             return result;
         }

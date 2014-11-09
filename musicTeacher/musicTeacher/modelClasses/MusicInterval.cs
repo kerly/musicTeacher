@@ -8,17 +8,11 @@ namespace musicTeacher
 {
     class MusicInterval : APlayablePattern
     {
-
         // Parent constructor
         public MusicInterval(MusicNote baseNote, PatternDefinitionInterval patternDefinition) :
             base(baseNote, patternDefinition)
         {
-        }
-
-        // Abstract override
-        public override void Play()
-        {
-
+            this.timeBetweenNotes = 1000;
         }
     }
 }

@@ -100,9 +100,9 @@ namespace musicTeacher
         /// </summary>
         /// <param name="noteName"></param>
         /// <returns></returns>
-        public static Button findPianoButtonByNoteName(String noteName, List<Button> buttons)
+        public static Button findPianoButtonByNoteName(String noteName, List<String> noteNames, List<Button> buttons)
         {
-            return buttons.Find(i => i.Text.Equals(noteName));
+            return buttons.ElementAt(noteNames.IndexOf(noteName));
         }
 
         /// <summary>
@@ -127,6 +127,101 @@ namespace musicTeacher
         public static APatternDefinition findPatternDefinitionByName(String patternName, List<APatternDefinition> definitions)
         {
             return definitions.Find(i => i.getName().Equals(patternName));
+        }
+
+        /// <summary>
+        /// Generates a random pattern based on the type required (Chord, Scale or Interval)
+        /// </summary>
+        /// <param name="patternType"></param>
+        /// <returns></returns>
+        public static APlayablePattern getRandomPattern(String patternType)
+        {
+            APlayablePattern result = null;
+
+            // Find a random pattern
+            APatternDefinition definition = null;
+            MusicNote note = null;
+            Random random = new Random();
+            if (patternType.Contains("Chord"))
+            {
+                int randomNumber = random.Next(0, MusicDefinitions.allChordDefinitions.Count - 1);
+                definition = MusicDefinitions.allChordDefinitions.ElementAt(randomNumber);
+                note = getRandomNoteInBounds(definition);
+                result = new MusicChord(note, (PatternDefinitionChord)definition);
+            }
+            else if (patternType.Contains("Scale"))
+            {
+                int randomNumber = random.Next(0, MusicDefinitions.allScaleDefinitions.Count - 1);
+                definition = MusicDefinitions.allScaleDefinitions.ElementAt(randomNumber);
+                note = getRandomNoteInBounds(definition);
+                result = new MusicScale(note, (PatternDefinitionScale)definition);
+            }
+            else if (patternType.Contains("Interval"))
+            {
+                int randomNumber = random.Next(0, MusicDefinitions.allIntervalDefinitions.Count - 1);
+                definition = MusicDefinitions.allIntervalDefinitions.ElementAt(randomNumber);
+                note = getRandomNoteInBounds(definition);
+                result = new MusicInterval(note, (PatternDefinitionInterval)definition);
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Finds a random note that will fit within the bounds of the pattern and notes
+        /// </summary>
+        /// <param name="definition"></param>
+        /// <returns></returns>
+        public static MusicNote getRandomNoteInBounds(APatternDefinition definition)
+        {
+            MusicNote result = null;
+
+            Random random = new Random();
+            do
+            {
+                int randomNoteIndex = random.Next(0, MusicDefinitions.allMusicNotes.Count - 1);
+                result = MusicDefinitions.allMusicNotes.ElementAt(randomNoteIndex);
+            } while (!isInBounds(result, definition.getNoteRange()));
+
+            return result;
+        }
+
+        /// <summary>
+        /// Finds a random note in the current octave
+        /// </summary>
+        /// <param name="definition"></param>
+        /// <param name="octave"></param>
+        /// <returns></returns>
+        public static MusicNote getRandomNoteInBoundsForOctave(APatternDefinition definition, int octave)
+        {
+            MusicNote result = null;
+
+            Random random = new Random();
+            do
+            {
+                int randomNoteIndex = random.Next(0, MusicDefinitions.allMusicNotes.Count - 1);
+                result = MusicDefinitions.allMusicNotes.ElementAt(randomNoteIndex);
+            } while (!isInBounds(result, definition.getNoteRange()) && !result.getName().Contains(octave.ToString()));
+
+            return result;
+        }
+
+        /// <summary>
+        /// Checks if the next note is within the bounds of the highest note
+        /// </summary>
+        /// <param name="note"></param>
+        /// <param name="interval"></param>
+        /// <returns></returns>
+        public static bool isInBounds(MusicNote note, int interval)
+        {
+            bool result = true;
+
+            if (note.getMidiNumber() + interval > MusicDefinitions.highestMidiNumber)
+            {
+                result = false;
+            }
+
+            return result;
         }
     }
 }
