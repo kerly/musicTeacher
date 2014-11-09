@@ -1050,13 +1050,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1236, 637);
             this.Controls.Add(this.hideLabels);
             this.Controls.Add(this.hidePiano);
             this.Controls.Add(this.groupBoxTrainingChoices);
             this.Controls.Add(this.pianoPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "FormTrainingPage";
             this.Text = "Music Teacher";
