@@ -25,6 +25,7 @@ namespace musicTeacher
         private static bool isPlayingPattern = false;
         private static List<String> keyTextList = null;
         private static List<Button> allPianoButtons = null;
+        private int closeFlag = 0;
 
         /// <summary>
         /// Constructor / Initializer
@@ -40,16 +41,6 @@ namespace musicTeacher
 
             // Audio Player
             MusicDefinitions.allMusicNotes.ElementAt(0).Play();
-        }
-
-        /// <summary>
-        /// Exit the Application (automatic)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FormTrainingPage_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
         }
 
         /// <summary>
@@ -301,6 +292,49 @@ namespace musicTeacher
             {
                 button.BackColor = Color.White;
             }
+        }
+        
+        // Make the GroupBox semi-ttransparent
+        private void groupBoxTrainingChoices_Paint(object sender, PaintEventArgs e)
+        {
+            groupBoxTrainingChoices.BackColor = Color.FromArgb(200, Color.White);
+        }
+
+        private void panelDefinitionBox_Paint(object sender, PaintEventArgs e)
+        {
+            panelDefinitionBox.BackColor = Color.FromArgb(0, Color.White);
+        }
+
+        private void panelTabNotes_Paint(object sender, PaintEventArgs e)
+        {
+            panelTabNotes.BackColor = Color.FromArgb(0, Color.White);
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeFlag = 1;
+            musicTeacher.forms.MenuPage.menuPage.Show();
+            this.Close();
+        }
+
+        private void testingModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeFlag = 1;
+            forms.EarTrainingPage earTrainingPage = new forms.EarTrainingPage();
+            earTrainingPage.Show();
+            this.Close();
+        }
+
+        private void FormTrainingPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Determine whether the user was trying to exit or go to different menu
+            if (closeFlag == 1)
+            {
+                e.Cancel = false;
+                this.Dispose();
+            }
+            else
+                Application.Exit();
         }
     }
 }

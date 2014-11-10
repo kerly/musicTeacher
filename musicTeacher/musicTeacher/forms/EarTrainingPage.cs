@@ -22,6 +22,8 @@ namespace musicTeacher.forms
         int user_score = 0;
         String answer;
         public static int currentOctave = 3;
+        // Flag to determine exit method
+        private int closeFlag = 0;
         List<String> pianokeys = new List<String>{
              /*   "C2", "C#2", "D2", "D#2", "E2", "F2", "F#2", "G2", "G#2", "A2", "A#2", "B2",*/
                 "C3", "C#3", "D3", "D#3", "E3", "F3", "F#3", "G3", "G#3", "A3", "A#3", "B3",
@@ -85,9 +87,10 @@ namespace musicTeacher.forms
 
         private void trainingModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormTrainingPage trainingpage = new FormTrainingPage();
-            this.Hide();
-            trainingpage.Show();
+            FormTrainingPage trainingPage = new FormTrainingPage();
+            closeFlag = 1;
+            trainingPage.Show();
+            this.Close();
         }
 
         //this function will play a random audio based on the three
@@ -206,9 +209,9 @@ namespace musicTeacher.forms
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MenuPage menupg = new MenuPage();
-            this.Hide();
-            menupg.Show();
+            closeFlag = 1;
+            this.Close();
+            musicTeacher.forms.MenuPage.menuPage.Show();
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -230,12 +233,6 @@ namespace musicTeacher.forms
                 play.Play();
             }
 
-        }
-
-
-        private void FormsClosed_TestingMode(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -280,6 +277,18 @@ namespace musicTeacher.forms
             button.BackColor = Color.Transparent;
             label10.Text = "";
             label11.Text = ""; 
+        }
+        
+        private void EarTrainingPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Determine whether the user was trying to exit or go to different menu
+            if (closeFlag == 1)
+            {
+                e.Cancel = false;
+                this.Dispose();
+            }
+            else
+                Application.Exit();
         }
 
     }//end of namespace

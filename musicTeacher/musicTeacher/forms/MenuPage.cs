@@ -12,9 +12,13 @@ namespace musicTeacher.forms
 {
     public partial class MenuPage : Form
     {
+        public static MenuPage menuPage = null;
+       
         public MenuPage()
         {
             InitializeComponent();
+
+            menuPage = this;
         }
 
         private void button1_Click(object sender, EventArgs e)
