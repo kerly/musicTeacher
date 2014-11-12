@@ -16,7 +16,8 @@ namespace musicTeacher
     {
         // Constants
         private const int _NOTE_REMAIN_TIME = 500;
-        private const int _PATTERN_REMAIN_TIME = 3000;
+        private const int _PATTERN_REMAIN_TIME = 4000;
+        private const int _MAX_CONCURRENT_NOTES = 5;
 
         // Public variables
         public static int currentOctave = 3;
@@ -25,6 +26,8 @@ namespace musicTeacher
         private static bool isPlayingPattern = false;
         private static List<String> keyTextList = null;
         private static List<Button> allPianoButtons = null;
+        private static List<Keys> currentlyHeldKeys = new List<Keys>();
+        private static int numOfNotesPlaying = 0;
         private int closeFlag = 0;
 
         /// <summary>
@@ -94,27 +97,6 @@ namespace musicTeacher
                     MusicDefinitions.allMusicNotes.ElementAt(allPianoButtons.IndexOf(button)),
                     _NOTE_REMAIN_TIME));
                 playNoteThread.Start();
-            }
-        }
-
-        /// <summary>
-        /// Play a piano note when a mapped computer key is pressed
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FormTrainingPage_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            String noteName = "";
-
-            if (isPlayingPattern == false)
-            {
-                if (MusicDefinitions.pianoKeyMap.TryGetValue(e.KeyChar, out noteName))
-                {
-                    noteName = noteName + currentOctave;
-                    Thread playNoteThread = new Thread(() =>
-                        PlayNoteOnPiano(NoteFinder.findNoteByName(noteName), _NOTE_REMAIN_TIME));
-                    playNoteThread.Start();
-                }
             }
         }
 
@@ -270,6 +252,7 @@ namespace musicTeacher
 
         private static void PlayNoteOnPiano(MusicNote note, int colorTime)
         {
+            numOfNotesPlaying++;
             Stopwatch stopWatch = new Stopwatch();
             Button button = NoteFinder.findPianoButtonByNoteName(note.getName(), keyTextList, allPianoButtons);
             button.BackColor = Color.LightSkyBlue;
@@ -292,6 +275,8 @@ namespace musicTeacher
             {
                 button.BackColor = Color.White;
             }
+
+            numOfNotesPlaying--;
         }
         
         // Make the GroupBox semi-ttransparent
@@ -336,5 +321,28 @@ namespace musicTeacher
             else
                 Application.Exit();
         }
+
+        private void FormTrainingPage_KeyDown(object sender, KeyEventArgs e)
+        {
+            String noteName = "";
+
+            if (isPlayingPattern == false && numOfNotesPlaying < _MAX_CONCURRENT_NOTES)
+            {
+                if (MusicDefinitions.pianoKeyMap.TryGetValue(e.KeyCode, out noteName) && !currentlyHeldKeys.Contains(e.KeyCode))
+                {
+                    currentlyHeldKeys.Add(e.KeyCode);
+                    noteName = noteName + currentOctave;
+                    Thread playNoteThread = new Thread(() =>
+                        PlayNoteOnPiano(NoteFinder.findNoteByName(noteName), _NOTE_REMAIN_TIME));
+                    playNoteThread.Start();
+                }
+            }
+        }
+
+        private void FormTrainingPage_KeyUp(object sender, KeyEventArgs e)
+        {
+            currentlyHeldKeys.Remove(e.KeyCode);
+        }
+
     }
 }

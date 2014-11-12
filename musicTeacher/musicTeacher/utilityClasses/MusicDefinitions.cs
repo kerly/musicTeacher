@@ -34,7 +34,7 @@ namespace musicTeacher
         public static List<PatternDefinitionChord> allChordDefinitions;
         public static List<PatternDefinitionScale> allScaleDefinitions;
         public static List<PatternDefinitionInterval> allIntervalDefinitions;
-        public static Dictionary<Char, String> pianoKeyMap;
+        public static Dictionary<Keys, String> pianoKeyMap;
 
         /// <summary>
         /// Wrapper function that sets all the definitions for this application
@@ -157,22 +157,22 @@ namespace musicTeacher
         /// Maps computer keyboard keys to Piano notes
         /// </summary>
         /// <returns></returns>
-        private static Dictionary<Char, String> createPianoKeyMap()
+        private static Dictionary<Keys, String> createPianoKeyMap()
         {
-            Dictionary<Char, String> result = new Dictionary<Char,String>();
+            Dictionary<Keys, String> result = new Dictionary<Keys, String>();
 
-            result.Add('a', "C");
-            result.Add('w', "C#");
-            result.Add('s', "D");
-            result.Add('e', "D#");
-            result.Add('d', "E");
-            result.Add('f', "F");
-            result.Add('t', "F#");
-            result.Add('g', "G");
-            result.Add('y', "G#");
-            result.Add('h', "A");
-            result.Add('u', "A#");
-            result.Add('j', "B");
+            result.Add(Keys.A, "C");
+            result.Add(Keys.W, "C#");
+            result.Add(Keys.S, "D");
+            result.Add(Keys.E, "D#");
+            result.Add(Keys.D, "E");
+            result.Add(Keys.F, "F");
+            result.Add(Keys.T, "F#");
+            result.Add(Keys.G, "G");
+            result.Add(Keys.Y, "G#");
+            result.Add(Keys.H, "A");
+            result.Add(Keys.U, "A#");
+            result.Add(Keys.J, "B");
 
             return result;
         }
