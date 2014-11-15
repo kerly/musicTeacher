@@ -103,10 +103,14 @@
             this.groupBoxTrainingChoices = new System.Windows.Forms.GroupBox();
             this.hidePiano = new System.Windows.Forms.CheckBox();
             this.hideLabels = new System.Windows.Forms.CheckBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testingModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pianoPanel.SuspendLayout();
             this.panelDefinitionBox.SuspendLayout();
             this.panelTabNotes.SuspendLayout();
             this.groupBoxTrainingChoices.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pianoPanel
@@ -147,7 +151,7 @@
             this.pianoPanel.Controls.Add(this.btnPianoE2);
             this.pianoPanel.Controls.Add(this.btnPianoD2);
             this.pianoPanel.Controls.Add(this.btnPianoC2);
-            this.pianoPanel.Location = new System.Drawing.Point(179, 30);
+            this.pianoPanel.Location = new System.Drawing.Point(179, 46);
             this.pianoPanel.Name = "pianoPanel";
             this.pianoPanel.Size = new System.Drawing.Size(776, 170);
             this.pianoPanel.TabIndex = 72;
@@ -1025,7 +1029,7 @@
             this.hidePiano.AutoSize = true;
             this.hidePiano.BackColor = System.Drawing.Color.Transparent;
             this.hidePiano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hidePiano.Location = new System.Drawing.Point(986, 30);
+            this.hidePiano.Location = new System.Drawing.Point(986, 53);
             this.hidePiano.Name = "hidePiano";
             this.hidePiano.Size = new System.Drawing.Size(94, 20);
             this.hidePiano.TabIndex = 74;
@@ -1038,13 +1042,38 @@
             this.hideLabels.AutoSize = true;
             this.hideLabels.BackColor = System.Drawing.Color.Transparent;
             this.hideLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hideLabels.Location = new System.Drawing.Point(986, 53);
+            this.hideLabels.Location = new System.Drawing.Point(986, 88);
             this.hideLabels.Name = "hideLabels";
             this.hideLabels.Size = new System.Drawing.Size(100, 20);
             this.hideLabels.TabIndex = 75;
             this.hideLabels.Text = "Hide Labels";
             this.hideLabels.UseVisualStyleBackColor = false;
             this.hideLabels.CheckedChanged += new System.EventHandler(this.hideLabels_CheckedChanged);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.homeToolStripMenuItem,
+            this.testingModeToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1236, 24);
+            this.menuStrip1.TabIndex = 76;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // homeToolStripMenuItem
+            // 
+            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
+            // 
+            // testingModeToolStripMenuItem
+            // 
+            this.testingModeToolStripMenuItem.Name = "testingModeToolStripMenuItem";
+            this.testingModeToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
+            this.testingModeToolStripMenuItem.Text = "Testing Mode";
+            this.testingModeToolStripMenuItem.Click += new System.EventHandler(this.testingModeToolStripMenuItem_Click);
             // 
             // FormTrainingPage
             // 
@@ -1056,8 +1085,10 @@
             this.Controls.Add(this.hidePiano);
             this.Controls.Add(this.groupBoxTrainingChoices);
             this.Controls.Add(this.pianoPanel);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormTrainingPage";
             this.Text = "Music Teacher";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormTrainingPage_FormClosed);
@@ -1068,6 +1099,8 @@
             this.panelTabNotes.ResumeLayout(false);
             this.panelTabNotes.PerformLayout();
             this.groupBoxTrainingChoices.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1149,5 +1182,8 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.CheckBox hidePiano;
         private System.Windows.Forms.CheckBox hideLabels;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testingModeToolStripMenuItem;
     }
 }

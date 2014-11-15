@@ -302,5 +302,19 @@ namespace musicTeacher
                 button.BackColor = Color.White;
             }
         }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            musicTeacher.forms.MenuPage menupage = new forms.MenuPage();
+            this.Hide();
+            menupage.Show(); 
+        }
+
+        private void testingModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            forms.EarTrainingPage testingmode = new forms.EarTrainingPage();
+            this.Hide();
+            testingmode.Show(); 
+        }
     }
 }
