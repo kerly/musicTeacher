@@ -285,13 +285,6 @@ namespace musicTeacher
             groupBoxTrainingChoices.BackColor = Color.FromArgb(200, Color.White);
         }
 
-<<<<<<< HEAD
-        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            musicTeacher.forms.MenuPage menupage = new forms.MenuPage();
-            this.Hide();
-            menupage.Show(); 
-=======
         private void panelDefinitionBox_Paint(object sender, PaintEventArgs e)
         {
             panelDefinitionBox.BackColor = Color.FromArgb(0, Color.White);
@@ -307,21 +300,14 @@ namespace musicTeacher
             closeFlag = 1;
             musicTeacher.forms.MenuPage.menuPage.Show();
             this.Close();
->>>>>>> origin/master
         }
 
         private void testingModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
             forms.EarTrainingPage testingmode = new forms.EarTrainingPage();
             this.Hide();
             testingmode.Show(); 
-        }
-=======
-            closeFlag = 1;
-            forms.EarTrainingPage earTrainingPage = new forms.EarTrainingPage();
-            earTrainingPage.Show();
-            this.Close();
         }
 
         private void FormTrainingPage_FormClosing(object sender, FormClosingEventArgs e)
@@ -358,6 +344,5 @@ namespace musicTeacher
             currentlyHeldKeys.Remove(e.KeyCode);
         }
 
->>>>>>> origin/master
     }
 }

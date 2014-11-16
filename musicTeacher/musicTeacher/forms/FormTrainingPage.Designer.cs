@@ -1033,12 +1033,9 @@
             this.hidePiano.AutoSize = true;
             this.hidePiano.BackColor = System.Drawing.Color.Transparent;
             this.hidePiano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.hidePiano.Location = new System.Drawing.Point(986, 53);
-=======
             this.hidePiano.ForeColor = System.Drawing.SystemColors.Control;
             this.hidePiano.Location = new System.Drawing.Point(986, 30);
->>>>>>> origin/master
             this.hidePiano.Name = "hidePiano";
             this.hidePiano.Size = new System.Drawing.Size(94, 20);
             this.hidePiano.TabIndex = 74;
@@ -1051,12 +1048,9 @@
             this.hideLabels.AutoSize = true;
             this.hideLabels.BackColor = System.Drawing.Color.Transparent;
             this.hideLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.hideLabels.Location = new System.Drawing.Point(986, 88);
-=======
             this.hideLabels.ForeColor = System.Drawing.SystemColors.Control;
             this.hideLabels.Location = new System.Drawing.Point(986, 53);
->>>>>>> origin/master
             this.hideLabels.Name = "hideLabels";
             this.hideLabels.Size = new System.Drawing.Size(100, 20);
             this.hideLabels.TabIndex = 75;
@@ -1080,7 +1074,6 @@
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
-            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // testingModeToolStripMenuItem
             // 
@@ -1106,9 +1099,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormTrainingPage";
             this.Text = "Music Teacher";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormTrainingPage_FormClosing);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormTrainingPage_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormTrainingPage_KeyUp);
             this.pianoPanel.ResumeLayout(false);
             this.panelDefinitionBox.ResumeLayout(false);
             this.panelDefinitionBox.PerformLayout();
