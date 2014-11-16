@@ -39,14 +39,6 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trainingModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panelTabNotes = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
@@ -60,6 +52,14 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelTabNotes = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -151,13 +151,12 @@
             this.radioButton15 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panelTabNotes.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -262,126 +261,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(920, 281);
             this.panel2.TabIndex = 11;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Green;
-            this.label11.Location = new System.Drawing.Point(778, 12);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 24);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Correct!";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Controls.Add(this.radioButton7);
-            this.panel6.Controls.Add(this.radioButton6);
-            this.panel6.Location = new System.Drawing.Point(145, 46);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(618, 40);
-            this.panel6.TabIndex = 14;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton7.Checked = true;
-            this.radioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton7.Location = new System.Drawing.Point(49, 7);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(127, 26);
-            this.radioButton7.TabIndex = 1;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Ear Training";
-            this.radioButton7.UseVisualStyleBackColor = false;
-            this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(371, 7);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(216, 26);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.Text = "Staff Music Recognition";
-            this.radioButton6.UseVisualStyleBackColor = false;
-            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Green;
-            this.label11.Location = new System.Drawing.Point(804, 14);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 24);
-            this.label11.TabIndex = 15;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(743, 11);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(156, 25);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Please try again.";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(620, 14);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 20);
-            this.label8.TabIndex = 13;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Location = new System.Drawing.Point(133, 197);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(683, 60);
-            this.panel5.TabIndex = 12;
-            // 
-            // panelTabNotes
-            // 
-            this.panelTabNotes.BackColor = System.Drawing.Color.Transparent;
-            this.panelTabNotes.Controls.Add(this.button7);
-            this.panelTabNotes.Controls.Add(this.button6);
-            this.panelTabNotes.Controls.Add(this.button5);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteAb);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteBb);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteB);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteAs);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteA);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteGs);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteG);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteFs);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteRandom);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteF);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteE);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteDs);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteD);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteCs);
-            this.panelTabNotes.Controls.Add(this.btnTabNoteC);
-            this.panelTabNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelTabNotes.Location = new System.Drawing.Point(81, 97);
-            this.panelTabNotes.Name = "panelTabNotes";
-            this.panelTabNotes.Size = new System.Drawing.Size(768, 94);
-            this.panelTabNotes.TabIndex = 11;
             // 
             // panel8
             // 
@@ -534,6 +413,115 @@
             this.button8.Text = "Minor 2nd";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.checkAnswer);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Green;
+            this.label11.Location = new System.Drawing.Point(804, 14);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(76, 24);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Correct!";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.Controls.Add(this.radioButton7);
+            this.panel6.Controls.Add(this.radioButton6);
+            this.panel6.Location = new System.Drawing.Point(145, 46);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(618, 40);
+            this.panel6.TabIndex = 14;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton7.Checked = true;
+            this.radioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton7.Location = new System.Drawing.Point(49, 7);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(127, 26);
+            this.radioButton7.TabIndex = 1;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "Ear Training";
+            this.radioButton7.UseVisualStyleBackColor = false;
+            this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton6.Location = new System.Drawing.Point(371, 7);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(216, 26);
+            this.radioButton6.TabIndex = 0;
+            this.radioButton6.Text = "Staff Music Recognition";
+            this.radioButton6.UseVisualStyleBackColor = false;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(743, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(156, 25);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Please try again.";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(620, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 20);
+            this.label8.TabIndex = 13;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.button3);
+            this.panel5.Location = new System.Drawing.Point(133, 197);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(683, 60);
+            this.panel5.TabIndex = 12;
+            // 
+            // panelTabNotes
+            // 
+            this.panelTabNotes.BackColor = System.Drawing.Color.Transparent;
+            this.panelTabNotes.Controls.Add(this.button7);
+            this.panelTabNotes.Controls.Add(this.button6);
+            this.panelTabNotes.Controls.Add(this.button5);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteAb);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteBb);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteB);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteAs);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteA);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteGs);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteG);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteFs);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteRandom);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteF);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteE);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteDs);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteD);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteCs);
+            this.panelTabNotes.Controls.Add(this.btnTabNoteC);
+            this.panelTabNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelTabNotes.Location = new System.Drawing.Point(81, 97);
+            this.panelTabNotes.Name = "panelTabNotes";
+            this.panelTabNotes.Size = new System.Drawing.Size(768, 94);
+            this.panelTabNotes.TabIndex = 11;
             // 
             // button7
             // 
@@ -1666,18 +1654,16 @@
             this.Name = "EarTrainingPage";
             this.Text = "Chord / Key Signature Identification";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EarTrainingPage_FormClosing);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panelTabNotes.ResumeLayout(false);
             this.panelTabNotes.PerformLayout();
-            this.panel8.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

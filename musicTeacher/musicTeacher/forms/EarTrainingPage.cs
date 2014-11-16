@@ -185,10 +185,7 @@ namespace musicTeacher.forms
         public void displayCard(String filename)
         {
             pictureBox1.Image = Image.FromFile(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\images\\Staff\\" + filename);
-            FormTrainingPage trainingPage = new FormTrainingPage();
-            closeFlag = 1;
-            trainingPage.Show();
-            this.Close();
+
         }
 
         //this function will play a random audio based on the three
@@ -300,6 +297,7 @@ namespace musicTeacher.forms
                 button.BackColor = Color.Transparent;
             }
 
+            timer1.Stop();
             label11.Text = ""; 
             label4.Text = "";
             label10.Text = "";
@@ -394,14 +392,7 @@ namespace musicTeacher.forms
         
         private void EarTrainingPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Determine whether the user was trying to exit or go to different menu
-            if (closeFlag == 1)
-            {
-                e.Cancel = false;
-                this.Dispose();
-            }
-            else
-                Application.Exit();
+            Application.Exit();
         }
 
 
