@@ -16,7 +16,8 @@ namespace musicTeacher
     {
         // Constants
         private const int _NOTE_REMAIN_TIME = 500;
-        private const int _PATTERN_REMAIN_TIME = 3000;
+        private const int _PATTERN_REMAIN_TIME = 4000;
+        private const int _MAX_CONCURRENT_NOTES = 5;
 
         // Public variables
         public static int currentOctave = 3;
@@ -25,6 +26,9 @@ namespace musicTeacher
         private static bool isPlayingPattern = false;
         private static List<String> keyTextList = null;
         private static List<Button> allPianoButtons = null;
+        private static List<Keys> currentlyHeldKeys = new List<Keys>();
+        private static int numOfNotesPlaying = 0;
+        private int closeFlag = 0;
 
         /// <summary>
         /// Constructor / Initializer
@@ -40,16 +44,6 @@ namespace musicTeacher
 
             // Audio Player
             MusicDefinitions.allMusicNotes.ElementAt(0).Play();
-        }
-
-        /// <summary>
-        /// Exit the Application (automatic)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FormTrainingPage_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
         }
 
         /// <summary>
@@ -103,27 +97,6 @@ namespace musicTeacher
                     MusicDefinitions.allMusicNotes.ElementAt(allPianoButtons.IndexOf(button)),
                     _NOTE_REMAIN_TIME));
                 playNoteThread.Start();
-            }
-        }
-
-        /// <summary>
-        /// Play a piano note when a mapped computer key is pressed
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FormTrainingPage_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            String noteName = "";
-
-            if (isPlayingPattern == false)
-            {
-                if (MusicDefinitions.pianoKeyMap.TryGetValue(e.KeyChar, out noteName))
-                {
-                    noteName = noteName + currentOctave;
-                    Thread playNoteThread = new Thread(() =>
-                        PlayNoteOnPiano(NoteFinder.findNoteByName(noteName), _NOTE_REMAIN_TIME));
-                    playNoteThread.Start();
-                }
             }
         }
 
@@ -279,6 +252,7 @@ namespace musicTeacher
 
         private static void PlayNoteOnPiano(MusicNote note, int colorTime)
         {
+            numOfNotesPlaying++;
             Stopwatch stopWatch = new Stopwatch();
             Button button = NoteFinder.findPianoButtonByNoteName(note.getName(), keyTextList, allPianoButtons);
             button.BackColor = Color.LightSkyBlue;
@@ -301,20 +275,89 @@ namespace musicTeacher
             {
                 button.BackColor = Color.White;
             }
+
+            numOfNotesPlaying--;
+        }
+        
+        // Make the GroupBox semi-ttransparent
+        private void groupBoxTrainingChoices_Paint(object sender, PaintEventArgs e)
+        {
+            groupBoxTrainingChoices.BackColor = Color.FromArgb(200, Color.White);
         }
 
+<<<<<<< HEAD
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             musicTeacher.forms.MenuPage menupage = new forms.MenuPage();
             this.Hide();
             menupage.Show(); 
+=======
+        private void panelDefinitionBox_Paint(object sender, PaintEventArgs e)
+        {
+            panelDefinitionBox.BackColor = Color.FromArgb(0, Color.White);
+        }
+
+        private void panelTabNotes_Paint(object sender, PaintEventArgs e)
+        {
+            panelTabNotes.BackColor = Color.FromArgb(0, Color.White);
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeFlag = 1;
+            musicTeacher.forms.MenuPage.menuPage.Show();
+            this.Close();
+>>>>>>> origin/master
         }
 
         private void testingModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             forms.EarTrainingPage testingmode = new forms.EarTrainingPage();
             this.Hide();
             testingmode.Show(); 
         }
+=======
+            closeFlag = 1;
+            forms.EarTrainingPage earTrainingPage = new forms.EarTrainingPage();
+            earTrainingPage.Show();
+            this.Close();
+        }
+
+        private void FormTrainingPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Determine whether the user was trying to exit or go to different menu
+            if (closeFlag == 1)
+            {
+                e.Cancel = false;
+                this.Dispose();
+            }
+            else
+                Application.Exit();
+        }
+
+        private void FormTrainingPage_KeyDown(object sender, KeyEventArgs e)
+        {
+            String noteName = "";
+
+            if (isPlayingPattern == false && numOfNotesPlaying < _MAX_CONCURRENT_NOTES)
+            {
+                if (MusicDefinitions.pianoKeyMap.TryGetValue(e.KeyCode, out noteName) && !currentlyHeldKeys.Contains(e.KeyCode))
+                {
+                    currentlyHeldKeys.Add(e.KeyCode);
+                    noteName = noteName + currentOctave;
+                    Thread playNoteThread = new Thread(() =>
+                        PlayNoteOnPiano(NoteFinder.findNoteByName(noteName), _NOTE_REMAIN_TIME));
+                    playNoteThread.Start();
+                }
+            }
+        }
+
+        private void FormTrainingPage_KeyUp(object sender, KeyEventArgs e)
+        {
+            currentlyHeldKeys.Remove(e.KeyCode);
+        }
+
+>>>>>>> origin/master
     }
 }

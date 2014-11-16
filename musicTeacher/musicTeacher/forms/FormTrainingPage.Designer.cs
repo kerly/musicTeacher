@@ -629,6 +629,7 @@
             this.panelDefinitionBox.Name = "panelDefinitionBox";
             this.panelDefinitionBox.Size = new System.Drawing.Size(697, 190);
             this.panelDefinitionBox.TabIndex = 4;
+            this.panelDefinitionBox.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDefinitionBox_Paint);
             // 
             // radioButton8
             // 
@@ -842,6 +843,7 @@
             this.panelTabNotes.Name = "panelTabNotes";
             this.panelTabNotes.Size = new System.Drawing.Size(768, 63);
             this.panelTabNotes.TabIndex = 0;
+            this.panelTabNotes.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTabNotes_Paint);
             // 
             // btnTabNoteRandom
             // 
@@ -1014,6 +1016,7 @@
             // 
             // groupBoxTrainingChoices
             // 
+            this.groupBoxTrainingChoices.BackColor = System.Drawing.SystemColors.Control;
             this.groupBoxTrainingChoices.Controls.Add(this.panelDefinitionBox);
             this.groupBoxTrainingChoices.Controls.Add(this.panelTabNotes);
             this.groupBoxTrainingChoices.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1023,13 +1026,19 @@
             this.groupBoxTrainingChoices.TabIndex = 73;
             this.groupBoxTrainingChoices.TabStop = false;
             this.groupBoxTrainingChoices.Text = "Training Choices";
+            this.groupBoxTrainingChoices.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBoxTrainingChoices_Paint);
             // 
             // hidePiano
             // 
             this.hidePiano.AutoSize = true;
             this.hidePiano.BackColor = System.Drawing.Color.Transparent;
             this.hidePiano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.hidePiano.Location = new System.Drawing.Point(986, 53);
+=======
+            this.hidePiano.ForeColor = System.Drawing.SystemColors.Control;
+            this.hidePiano.Location = new System.Drawing.Point(986, 30);
+>>>>>>> origin/master
             this.hidePiano.Name = "hidePiano";
             this.hidePiano.Size = new System.Drawing.Size(94, 20);
             this.hidePiano.TabIndex = 74;
@@ -1042,7 +1051,12 @@
             this.hideLabels.AutoSize = true;
             this.hideLabels.BackColor = System.Drawing.Color.Transparent;
             this.hideLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.hideLabels.Location = new System.Drawing.Point(986, 88);
+=======
+            this.hideLabels.ForeColor = System.Drawing.SystemColors.Control;
+            this.hideLabels.Location = new System.Drawing.Point(986, 53);
+>>>>>>> origin/master
             this.hideLabels.Name = "hideLabels";
             this.hideLabels.Size = new System.Drawing.Size(100, 20);
             this.hideLabels.TabIndex = 75;
@@ -1079,6 +1093,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1236, 637);
             this.Controls.Add(this.hideLabels);
@@ -1091,8 +1106,9 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormTrainingPage";
             this.Text = "Music Teacher";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormTrainingPage_FormClosed);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormTrainingPage_KeyPress);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormTrainingPage_FormClosing);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormTrainingPage_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormTrainingPage_KeyUp);
             this.pianoPanel.ResumeLayout(false);
             this.panelDefinitionBox.ResumeLayout(false);
             this.panelDefinitionBox.PerformLayout();
