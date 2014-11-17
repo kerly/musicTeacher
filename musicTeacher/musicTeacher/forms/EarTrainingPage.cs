@@ -11,33 +11,112 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Media;
+using System.IO;
 
 
 namespace musicTeacher.forms
 {
     public partial class EarTrainingPage : Form
     {
-        int total_questions = 0;
+        //Initializing dynamic Arrays and Variables
+        int total_questions = -1;
+        int timeLeft;
         APlayablePattern play;
         int user_score = 0;
         String answer;
+        String answer2 = "";
         public static int currentOctave = 3;
+<<<<<<< HEAD
+        private static List<FlashCards> allflashcards = null;
+        private static List<Intervals> allIntervals = null;
+
+        List<String> pianokeys = new List<String>
+        {
+=======
         // Flag to determine exit method
         private int closeFlag = 0;
         List<String> pianokeys = new List<String>{
              /*   "C2", "C#2", "D2", "D#2", "E2", "F2", "F#2", "G2", "G#2", "A2", "A#2", "B2",*/
+>>>>>>> origin/master
                 "C3", "C#3", "D3", "D#3", "E3", "F3", "F#3", "G3", "G#3", "A3", "A#3", "B3",
-                /*"C4", "C#4", "D4", "D#4", "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4"*/
         };
 
         public EarTrainingPage()
         {
             InitializeComponent();
-            // generatingList(); 
+            pictureBox1.Visible = false;
+            panel1.Visible = false;
+            panel8.Visible = false;
+            label4.Text = "";
+            label11.Text = "";
+            label10.Text = "";
 
             // Initialize the applications definitions
             MusicDefinitions.initDefinitions();
-            RandomAudio();
+            allflashcards = createAllflashcards();
+            allIntervals = createAllIntervals();
+            changeopacity(); 
+        }
+
+        /// <summary>
+        /// Changes the opacity of the panels
+        /// </summary>
+        public void changeopacity()
+        {
+            panel2.BackColor = Color.FromArgb(150, Color.White);
+            panel7.BackColor = Color.FromArgb(150, Color.White);
+            panel1.BackColor = Color.FromArgb(150, Color.White);
+            panel3.BackColor = Color.FromArgb(150, Color.White);
+            panel4.BackColor = Color.FromArgb(150, Color.White);
+
+
+        }
+
+        /// <summary>
+        /// Maps every Interval to its appropriate Interval picture
+        /// </summary>
+        private static List<Intervals> createAllIntervals()
+        {
+            List<Intervals> result = new List<Intervals>();
+            result.Add(new Intervals("Minor 2nd", "\\2_m.png"));
+            result.Add(new Intervals("Major 2nd", "\\2_w.png"));
+            result.Add(new Intervals("Minor 3rd", "\\3_m.png"));
+            result.Add(new Intervals("Major 3rd", "\\3_w.png"));
+            result.Add(new Intervals("Perfect 4th", "\\4_czy.png"));
+            result.Add(new Intervals("Tritone", "\\Tryton.png"));
+            result.Add(new Intervals("Perfect 5th", "\\5_cz.png"));
+            result.Add(new Intervals("Minor 6th", "\\6_m.png"));
+            result.Add(new Intervals("Major 6th", "\\6_w.png"));
+            result.Add(new Intervals("Major 7th", "\\7_w.png"));
+            result.Add(new Intervals("Minor 7th", "\\7_m.png"));
+            result.Add(new Intervals("Octave", "\\8_cz.png"));
+
+            return result;
+        }
+
+        /// <summary>
+        /// Maps every major/minor name with its picture
+        /// </summary>
+        private static List<FlashCards> createAllflashcards()
+        {
+            List<FlashCards> result = new List<FlashCards>();
+            result.Add(new FlashCards("C", "A", "\\C-major_a-minor.png", "", ""));
+            result.Add(new FlashCards("C#", "A#", "\\C-sharp-major_a-sharp-minor.png", "Db", "Bb"));
+            result.Add(new FlashCards("Cb", "Ab", "\\C-flat-major_a-flat-minor.png", "B", ""));
+            result.Add(new FlashCards("D", "B", "\\D-major_b-minor.png", "", ""));
+            result.Add(new FlashCards("Db", "Bb", "\\D-flat-major_b-flat-minor.png", "C#", "A#"));
+            result.Add(new FlashCards("E", "C#", "\\E-major_c-sharp-minor.png", "", ""));
+            result.Add(new FlashCards("Eb", "C", "\\E-flat-major_c-minor.png", "", ""));
+            result.Add(new FlashCards("F", "D", "\\F-major_d-minor.png", "", ""));
+            result.Add(new FlashCards("F#", "D#", "\\F-sharp-major_d-sharp-minor.png", "Gb", "Eb"));
+            result.Add(new FlashCards("G", "E", "\\G-major_e-minor.png", "", ""));
+            result.Add(new FlashCards("Gb", "Eb", "\\G-flat-major_E-flat-minor.png", "F#", "D#"));
+            result.Add(new FlashCards("A", "F#", "\\A-Major_F-Sharp-Minor.png", "", ""));
+            result.Add(new FlashCards("Ab", "F", "\\A-flat-major_f-minor.png", "", "G#"));
+            result.Add(new FlashCards("B", "G#", "\\B-major_g-sharp-minor.png", "Cb", "Ab"));
+            result.Add(new FlashCards("Bb", "G", "\\B-flat-major_g-minor.png", "", ""));
+
+            return result;
         }
 
         private List<Button> getAllPianoButtons()
@@ -63,76 +142,98 @@ namespace musicTeacher.forms
             return new List<Button>(noteChoiceButtons);
         }
 
-        private List<Button> getAllChordButtons()
-        {
-            List<Button> result = new List<Button>();
-
-            return result;
-        }
-
-        private List<Button> getAllScaleButtons()
-        {
-            List<Button> result = new List<Button>();
-
-            return result;
-        }
-
-        private List<Button> getAllIntervalButtons()
-        {
-            List<Button> result = new List<Button>();
-
-            return result;
-        }
-
-
         private void trainingModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FormTrainingPage trainingpage = new FormTrainingPage();
+            this.Hide();
+            trainingpage.Show();
+        }
+
+        public void RandomFlashCard()
+        {
+
+            //  String noteName = allflashcards[index];
+            RadioButton checkedBox = panel1.Controls.OfType<RadioButton>()
+            .FirstOrDefault(r => r.Checked);
+            String type = checkedBox.Text.Trim();
+            Random rnd = new Random();
+            int index;
+            if (type.Equals("Major"))
+            {
+                //Using the Random operator to pick a random card from the list
+
+                index = rnd.Next(allflashcards.Count);
+                answer = allflashcards[index].getmajor();
+                answer2 = allflashcards[index].getchoice2_major();
+                displayCard(allflashcards[index].getpicture());
+            }
+            else if (type.Equals("Minor"))
+            {
+                //Using the Random operator to pick a random card from the list
+                index = rnd.Next(allflashcards.Count);
+
+                answer = allflashcards[index].getminor();
+                answer2 = allflashcards[index].getchoice2_minor();
+                displayCard(allflashcards[index].getpicture());
+            }
+            else
+            {
+                //Using the Random operator to pick a random card from the list
+                index = rnd.Next(allIntervals.Count);
+                answer = allIntervals[index].getinterval();
+                displayCard(allIntervals[index].getpicture());
+
+            }
+            startTimer();
+        }
+
+        /// <summary>
+        /// Display the Random FlashCard in the Picture Box
+        /// </summary>
+        public void displayCard(String filename)
+        {
+<<<<<<< HEAD
+            pictureBox1.Image = Image.FromFile(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\images\\Staff\\" + filename);
+
+=======
             FormTrainingPage trainingPage = new FormTrainingPage();
             closeFlag = 1;
             trainingPage.Show();
             this.Close();
+>>>>>>> origin/master
         }
 
         //this function will play a random audio based on the three
         //choices that was chosen: Scale, Chord, Interval
         private void RandomAudio()
         {
-            //First Find the name of the checked Radio Box
-            //Choices: Scale, Chord, Interval
             // Find the pattern definition by the selected radio button
-            RadioButton checkedBox = panel1.Controls.OfType<RadioButton>()
+            RadioButton checkedBox = panel4.Controls.OfType<RadioButton>()
                 .FirstOrDefault(r => r.Checked);
             String type = checkedBox.Text.Trim();
-
-            RadioButton checkedBox1 = panel4.Controls.OfType<RadioButton>()
-                .FirstOrDefault(r => r.Checked);
 
             //Using the Random operator to pick a random note from the list
             Random rnd = new Random();
             int index = rnd.Next(pianokeys.Count);
             String noteName = pianokeys[index];
 
-            answer = noteName;
+            answer = noteName.Split('3')[0];
             MusicNote baseNote = NoteFinder.findNoteByName(noteName);
-            String major_minor;
-            APatternDefinition definition = null;
-            if (type.Equals("Chord"))
+            List<APatternDefinition> parentList = null;
+            if (type.Contains("Chord"))
             {
-                major_minor = checkedBox1.Text + " Chord";
-                List<APatternDefinition> parentList = MusicDefinitions.allChordDefinitions.Cast<APatternDefinition>().ToList();
-                definition = NoteFinder.findPatternDefinitionByName(major_minor, parentList);
+                parentList = MusicDefinitions.allChordDefinitions.Cast<APatternDefinition>().ToList();
             }
-            else if (type.Equals("Scale"))
+            else if (type.Contains("Scale"))
             {
-                major_minor = checkedBox1.Text + " Scale";
-                List<APatternDefinition> parentList = MusicDefinitions.allScaleDefinitions.Cast<APatternDefinition>().ToList();
-                definition = NoteFinder.findPatternDefinitionByName(major_minor, parentList);
+                parentList = MusicDefinitions.allScaleDefinitions.Cast<APatternDefinition>().ToList();
             }
-            else if (type.Equals("Interval"))
+            else
             {
-                List<APatternDefinition> parentList = MusicDefinitions.allIntervalDefinitions.Cast<APatternDefinition>().ToList();
-                definition = NoteFinder.findPatternDefinitionByName(checkedBox1.Text, parentList);
+                parentList = MusicDefinitions.allIntervalDefinitions.Cast<APatternDefinition>().ToList();
+
             }
+            APatternDefinition definition = NoteFinder.findPatternDefinitionByName(checkedBox.Text, parentList);
 
             // Get the concrete pattern for the selected radio button and base note
             APlayablePattern concretePattern = NoteFinder.generateConcretePattern(baseNote, definition);
@@ -143,28 +244,8 @@ namespace musicTeacher.forms
 
             //save this to a global array to replay if necessary
             play = concretePattern;
-        }//end of RandomAudio function
-
-
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            panel2.BackColor = Color.FromArgb(150, Color.White);
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-            panel6.BackColor = Color.FromArgb(150, Color.White);
-
-        }
-
-        int timeLeft;
-        private void EarTrainingPage_Load(object sender, EventArgs e)
-        {
             startTimer();
-
-        }//end of function
+        }//end of RandomAudio function
 
         public void startTimer()
         {
@@ -190,16 +271,6 @@ namespace musicTeacher.forms
             }
         }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-            panel7.BackColor = Color.FromArgb(150, Color.White);
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-            panel4.BackColor = Color.FromArgb(150, Color.White);
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             user_score = 0;
@@ -212,12 +283,6 @@ namespace musicTeacher.forms
             closeFlag = 1;
             this.Close();
             musicTeacher.forms.MenuPage.menuPage.Show();
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-            panel3.BackColor = Color.FromArgb(150, Color.White);
-
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -237,46 +302,106 @@ namespace musicTeacher.forms
 
         private void button2_Click(object sender, EventArgs e)
         {
+            foreach (Button button in panelTabNotes.Controls.OfType<Button>())
+            {
+                button.BackColor = Color.Transparent;
+            }
+
+            foreach (Button button in panel8.Controls.OfType<Button>())
+            {
+                button.BackColor = Color.Transparent;
+            }
+
+            label11.Text = ""; 
+            label4.Text = "";
             label10.Text = "";
-            RandomAudio();
+
+            RadioButton checkedBox = panel6.Controls.OfType<RadioButton>()
+            .FirstOrDefault(r => r.Checked);
+            String type = checkedBox.Text.Trim();
+
             total_questions++;
             label3.Text = "Score: " + user_score + "/" + total_questions;
-            startTimer();
+
+            if (type.Contains("Staff"))
+            {
+                RandomFlashCard();
+            }
+            else
+            {
+                RandomAudio();
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             timer1.Stop();
             label4.Text = "";
+            label11.Text = "";
             label10.Text = "Answer: " + answer;
         }
 
         private void checkAnswer(object sender, MouseEventArgs e)
         {
             Button button = (Button)sender;
-           // Find the base note for the selected button
-            String noteName = button.Text.Trim() + currentOctave;
-            
-            if (noteName == answer)
+            // Find the base note for the selected button
+            String trim_answer = answer.Trim();
+            String noteName = button.Text.Trim();
+
+            if (noteName == trim_answer || noteName == answer2)
             {
+                timer1.Stop();
+                label10.Text = ""; 
                 label11.Text = "Correct Answer";
                 button.BackColor = Color.LimeGreen;
-                user_score++; 
-                RandomAudio();
-                total_questions++;
-                label3.Text = "Score: " + user_score + "/" + total_questions;
-                startTimer();
-               
+                user_score++;
+                label3.Text = "Score: " + user_score + "/" + (total_questions + 1);
+                label4.Text = "";
             }
             else
             {
                 label10.Text = "Please try again.";
                 button.BackColor = Color.Crimson;
             }
+        }
 
-            button.BackColor = Color.Transparent;
-            label10.Text = "";
-            label11.Text = ""; 
+        private void radioButton15_CheckedChanged(object sender, EventArgs e)
+        {
+            panel8.Visible = true;
+            panelTabNotes.Visible = false;
+        }
+
+        private void radioButton14_CheckedChanged(object sender, EventArgs e)
+        {
+            panel8.Visible = false;
+            panelTabNotes.Visible = true;
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            panel8.Visible = false;
+            panelTabNotes.Visible = true;
+        }
+
+        private void radioButton7_CheckedChanged(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+            panel1.Visible = false;
+            pictureBox1.Visible = false;
+            label4.Text = "";
+            timer1.Stop(); 
+
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            panel4.Visible = false;
+            panel1.Visible = true;
+            pictureBox1.Visible = true;
+            label4.Text = "";
+            timer1.Stop(); 
+
         }
         
         private void EarTrainingPage_FormClosing(object sender, FormClosingEventArgs e)
@@ -290,6 +415,7 @@ namespace musicTeacher.forms
             else
                 Application.Exit();
         }
+
 
     }//end of namespace
 }//end of project

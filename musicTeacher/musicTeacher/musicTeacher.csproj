@@ -48,6 +48,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FlashCards.cs" />
     <Compile Include="forms\EarTrainingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +61,7 @@
     <Compile Include="forms\MenuPage.Designer.cs">
       <DependentUpon>MenuPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Intervals.cs" />
     <Compile Include="modelClasses\APatternDefinition.cs" />
     <Compile Include="modelClasses\APlayablePattern.cs" />
     <Compile Include="modelClasses\AudioPlayer.cs" />
@@ -155,7 +157,34 @@
     <Content Include="images\1415344512_34124.ico" />
     <Content Include="images\1415438860_audio-volume-medium-panel.png" />
     <Content Include="images\26722-huntington-piano-1920x1080-music-wallpaper.jpg" />
+    <Content Include="images\Staff\2_m.png" />
+    <Content Include="images\Staff\2_w.png" />
+    <Content Include="images\Staff\3_m.png" />
+    <Content Include="images\Staff\3_w.png" />
+    <Content Include="images\Staff\4_czy.png" />
+    <Content Include="images\Staff\5_cz.png" />
+    <Content Include="images\Staff\6_m.png" />
+    <Content Include="images\Staff\6_w.png" />
+    <Content Include="images\Staff\7_m.png" />
+    <Content Include="images\Staff\7_w.png" />
+    <Content Include="images\Staff\8_cz.png" />
+    <Content Include="images\Staff\Tryton.png" />
     <Content Include="images\musical-notes-gif-musicnotes.gif" />
+    <Content Include="images\Staff\B-flat-major_g-minor.png" />
+    <Content Include="images\Staff\A-Major_F-Sharp-Minor.png" />
+    <Content Include="images\Staff\C-flat-major_a-flat-minor.png" />
+    <Content Include="images\Staff\C-major_a-minor.png" />
+    <Content Include="images\Staff\D-flat-major_b-flat-minor.png" />
+    <Content Include="images\Staff\D-major_b-minor.png" />
+    <Content Include="images\Staff\E-flat-major_c-minor.png" />
+    <Content Include="images\Staff\F-major_d-minor.png" />
+    <Content Include="images\Staff\G-flat-major_e-flat-minor.png" />
+    <Content Include="images\Staff\G-major_e-minor.png" />
+    <Content Include="images\Staff\A-flat-major_f-minor.png" />
+    <Content Include="images\Staff\B-major_g-sharp-minor.png" />
+    <Content Include="images\Staff\C-sharp-major_a-sharp-minor.png" />
+    <Content Include="images\Staff\E-major_c-sharp-minor.png" />
+    <Content Include="images\Staff\F-sharp-major_d-sharp-minor.png" />
     <Content Include="images\Treble Clef &amp; Notes.PE0389.gif" />
     <Content Include="images\white_background.jpg" />
     <None Include="Resources\upArrow.png" />

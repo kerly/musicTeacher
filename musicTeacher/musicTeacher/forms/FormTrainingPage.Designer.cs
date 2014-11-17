@@ -157,7 +157,7 @@
             this.pianoPanel.Controls.Add(this.btnPianoE2);
             this.pianoPanel.Controls.Add(this.btnPianoD2);
             this.pianoPanel.Controls.Add(this.btnPianoC2);
-            this.pianoPanel.Location = new System.Drawing.Point(179, 30);
+            this.pianoPanel.Location = new System.Drawing.Point(179, 46);
             this.pianoPanel.Name = "pianoPanel";
             this.pianoPanel.Size = new System.Drawing.Size(776, 170);
             this.pianoPanel.TabIndex = 72;
@@ -1039,8 +1039,12 @@
             this.hidePiano.AutoSize = true;
             this.hidePiano.BackColor = System.Drawing.Color.Transparent;
             this.hidePiano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
+            this.hidePiano.Location = new System.Drawing.Point(986, 53);
+=======
             this.hidePiano.ForeColor = System.Drawing.SystemColors.Control;
             this.hidePiano.Location = new System.Drawing.Point(986, 30);
+>>>>>>> origin/master
             this.hidePiano.Name = "hidePiano";
             this.hidePiano.Size = new System.Drawing.Size(94, 20);
             this.hidePiano.TabIndex = 74;
@@ -1053,8 +1057,12 @@
             this.hideLabels.AutoSize = true;
             this.hideLabels.BackColor = System.Drawing.Color.Transparent;
             this.hideLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
+            this.hideLabels.Location = new System.Drawing.Point(986, 88);
+=======
             this.hideLabels.ForeColor = System.Drawing.SystemColors.Control;
             this.hideLabels.Location = new System.Drawing.Point(986, 53);
+>>>>>>> origin/master
             this.hideLabels.Name = "hideLabels";
             this.hideLabels.Size = new System.Drawing.Size(100, 20);
             this.hideLabels.TabIndex = 75;
