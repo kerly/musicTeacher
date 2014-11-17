@@ -158,6 +158,8 @@
     <Content Include="images\musical-notes-gif-musicnotes.gif" />
     <Content Include="images\Treble Clef &amp; Notes.PE0389.gif" />
     <Content Include="images\white_background.jpg" />
+    <None Include="Resources\upArrow.png" />
+    <None Include="Resources\downArrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

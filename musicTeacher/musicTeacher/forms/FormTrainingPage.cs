@@ -29,6 +29,7 @@ namespace musicTeacher
         private static List<Keys> currentlyHeldKeys = new List<Keys>();
         private static int numOfNotesPlaying = 0;
         private int closeFlag = 0;
+        private static int playSpeed = 5;
 
         /// <summary>
         /// Constructor / Initializer
@@ -344,5 +345,51 @@ namespace musicTeacher
             currentlyHeldKeys.Remove(e.KeyCode);
         }
 
+        // Method used to change octave
+        private void octaveInc_Click(object sender, EventArgs e)
+        {
+            if (currentOctave == 2)
+            {
+                currentOctave = 3;
+                octaveLabel.Text = "Octave: " + currentOctave;
+            }
+            else if (currentOctave == 3)
+            {
+                currentOctave = 4;
+                octaveLabel.Text = "Octave: " + currentOctave;
+            }
+            else
+            {
+                currentOctave = 2;
+                octaveLabel.Text = "Octave: " + currentOctave;
+            }
+        }
+
+        // Method used to change octave
+        private void octaveDec_Click(object sender, EventArgs e)
+        {
+            if (currentOctave == 2)
+            {
+                currentOctave = 4;
+                octaveLabel.Text = "Octave: " + currentOctave;
+            }
+            else if (currentOctave == 3)
+            {
+                currentOctave = 2;
+                octaveLabel.Text = "Octave: " + currentOctave;
+            }
+            else
+            {
+                currentOctave = 3;
+                octaveLabel.Text = "Octave: " + currentOctave;
+            }
+        }
+
+        // Method used to change play speed
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            playSpeed = Math.Abs(trackBar1.Value - 5);
+            playSpeedLab.Text = "Play Speed: " + playSpeed;
+        }
     }
 }

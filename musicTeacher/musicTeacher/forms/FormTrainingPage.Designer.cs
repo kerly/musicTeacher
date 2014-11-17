@@ -106,11 +106,17 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testingModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.octaveDec = new System.Windows.Forms.Button();
+            this.octaveInc = new System.Windows.Forms.Button();
+            this.octaveLabel = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.playSpeedLab = new System.Windows.Forms.Label();
             this.pianoPanel.SuspendLayout();
             this.panelDefinitionBox.SuspendLayout();
             this.panelTabNotes.SuspendLayout();
             this.groupBoxTrainingChoices.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // pianoPanel
@@ -1081,6 +1087,65 @@
             this.testingModeToolStripMenuItem.Text = "Testing Mode";
             this.testingModeToolStripMenuItem.Click += new System.EventHandler(this.testingModeToolStripMenuItem_Click);
             // 
+            // octaveDec
+            // 
+            this.octaveDec.BackColor = System.Drawing.Color.Transparent;
+            this.octaveDec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.octaveDec.ForeColor = System.Drawing.Color.Transparent;
+            this.octaveDec.Image = ((System.Drawing.Image)(resources.GetObject("octaveDec.Image")));
+            this.octaveDec.Location = new System.Drawing.Point(101, 75);
+            this.octaveDec.Name = "octaveDec";
+            this.octaveDec.Size = new System.Drawing.Size(26, 23);
+            this.octaveDec.TabIndex = 78;
+            this.octaveDec.UseVisualStyleBackColor = false;
+            this.octaveDec.Click += new System.EventHandler(this.octaveDec_Click);
+            // 
+            // octaveInc
+            // 
+            this.octaveInc.Image = ((System.Drawing.Image)(resources.GetObject("octaveInc.Image")));
+            this.octaveInc.Location = new System.Drawing.Point(101, 30);
+            this.octaveInc.Name = "octaveInc";
+            this.octaveInc.Size = new System.Drawing.Size(26, 23);
+            this.octaveInc.TabIndex = 79;
+            this.octaveInc.UseVisualStyleBackColor = true;
+            this.octaveInc.Click += new System.EventHandler(this.octaveInc_Click);
+            // 
+            // octaveLabel
+            // 
+            this.octaveLabel.AutoSize = true;
+            this.octaveLabel.BackColor = System.Drawing.Color.Transparent;
+            this.octaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.octaveLabel.ForeColor = System.Drawing.Color.White;
+            this.octaveLabel.Location = new System.Drawing.Point(98, 56);
+            this.octaveLabel.Name = "octaveLabel";
+            this.octaveLabel.Size = new System.Drawing.Size(64, 16);
+            this.octaveLabel.TabIndex = 80;
+            this.octaveLabel.Text = "Octave: 3";
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.BackColor = System.Drawing.SystemColors.Control;
+            this.trackBar1.LargeChange = 1;
+            this.trackBar1.Location = new System.Drawing.Point(1002, 269);
+            this.trackBar1.Maximum = 5;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(104, 45);
+            this.trackBar1.TabIndex = 81;
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // playSpeedLab
+            // 
+            this.playSpeedLab.AutoSize = true;
+            this.playSpeedLab.BackColor = System.Drawing.Color.Transparent;
+            this.playSpeedLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playSpeedLab.ForeColor = System.Drawing.Color.White;
+            this.playSpeedLab.Location = new System.Drawing.Point(999, 317);
+            this.playSpeedLab.Name = "playSpeedLab";
+            this.playSpeedLab.Size = new System.Drawing.Size(92, 16);
+            this.playSpeedLab.TabIndex = 82;
+            this.playSpeedLab.Text = "Play Speed: 5";
+            // 
             // FormTrainingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1088,6 +1153,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1236, 637);
+            this.Controls.Add(this.playSpeedLab);
+            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.octaveLabel);
+            this.Controls.Add(this.octaveInc);
+            this.Controls.Add(this.octaveDec);
             this.Controls.Add(this.hideLabels);
             this.Controls.Add(this.hidePiano);
             this.Controls.Add(this.groupBoxTrainingChoices);
@@ -1109,6 +1179,7 @@
             this.groupBoxTrainingChoices.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1193,5 +1264,10 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testingModeToolStripMenuItem;
+        private System.Windows.Forms.Button octaveDec;
+        private System.Windows.Forms.Button octaveInc;
+        private System.Windows.Forms.Label octaveLabel;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Label playSpeedLab;
     }
 }
