@@ -40,12 +40,9 @@
             this.trainingModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.panel6 = new System.Windows.Forms.Panel();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
-=======
->>>>>>> origin/master
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -150,14 +147,11 @@
             this.btnPianoE2 = new System.Windows.Forms.Button();
             this.btnPianoD2 = new System.Windows.Forms.Button();
             this.btnPianoC2 = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioButton15 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-=======
             this.panel1.SuspendLayout();
->>>>>>> origin/master
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -1602,7 +1596,6 @@
             this.btnPianoC2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPianoC2.UseVisualStyleBackColor = false;
             // 
-<<<<<<< HEAD
             // panel1
             // 
             this.panel1.Controls.Add(this.radioButton15);
@@ -1654,8 +1647,6 @@
             this.radioButton4.UseVisualStyleBackColor = false;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
-=======
->>>>>>> origin/master
             // EarTrainingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1674,14 +1665,9 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "EarTrainingPage";
             this.Text = "Chord / Key Signature Identification";
-<<<<<<< HEAD
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormsClosed_TestingMode);
-=======
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EarTrainingPage_FormClosing);
-            this.Load += new System.EventHandler(this.EarTrainingPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
->>>>>>> origin/master
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
