@@ -28,18 +28,12 @@ namespace musicTeacher.forms
         public static int currentOctave = 3;
         private static List<FlashCards> allflashcards = null;
         private static List<Intervals> allIntervals = null;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
         // Flag to determine exit method
         private int closeFlag = 0;
         
         List<String> pianokeys = new List<String>{
-<<<<<<< HEAD
-=======
              /*   "C2", "C#2", "D2", "D#2", "E2", "F2", "F#2", "G2", "G#2", "A2", "A#2", "B2",*/
->>>>>>> origin/master
                 "C3", "C#3", "D3", "D#3", "E3", "F3", "F#3", "G3", "G#3", "A3", "A#3", "B3",
         };   
 
@@ -194,10 +188,6 @@ namespace musicTeacher.forms
         public void displayCard(String filename)
         {
             pictureBox1.Image = Image.FromFile(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\images\\Staff\\" + filename);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
         }
 
         //this function will play a random audio based on the three

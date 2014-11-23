@@ -305,17 +305,13 @@ namespace musicTeacher
 
         private void testingModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-
             forms.EarTrainingPage testingmode = new forms.EarTrainingPage();
             this.Hide();
             testingmode.Show(); 
-=======
             closeFlag = 1;
             forms.EarTrainingPage earTrainingPage = new forms.EarTrainingPage();
             earTrainingPage.Show();
             this.Close();
->>>>>>> origin/master
         }
 
         private void FormTrainingPage_FormClosing(object sender, FormClosingEventArgs e)
@@ -352,8 +348,7 @@ namespace musicTeacher
             currentlyHeldKeys.Remove(e.KeyCode);
         }
 
-<<<<<<< HEAD
-=======
+
         // Method used to change octave
         private void octaveInc_Click(object sender, EventArgs e)
         {
@@ -400,6 +395,5 @@ namespace musicTeacher
             playSpeed = Math.Abs(trackBar1.Value - 5);
             playSpeedLab.Text = "Play Speed: " + playSpeed;
         }
->>>>>>> origin/master
     }
 }
