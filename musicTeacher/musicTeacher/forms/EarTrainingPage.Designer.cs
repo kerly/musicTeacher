@@ -39,6 +39,17 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trainingModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
+=======
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelTabNotes = new System.Windows.Forms.Panel();
+>>>>>>> origin/master
             this.panel8 = new System.Windows.Forms.Panel();
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
@@ -151,6 +162,10 @@
             this.radioButton15 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
+<<<<<<< HEAD
+=======
+            this.panel1.SuspendLayout();
+>>>>>>> origin/master
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -1654,6 +1669,11 @@
             this.Name = "EarTrainingPage";
             this.Text = "Chord / Key Signature Identification";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EarTrainingPage_FormClosing);
+<<<<<<< HEAD
+=======
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+>>>>>>> origin/master
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);

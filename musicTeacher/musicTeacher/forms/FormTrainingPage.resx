@@ -121,6 +121,23 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="octaveDec.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAAHdElNRQfeCw8ECgw/A/rFAAAAqElEQVRIS7XTSxKDIBCE
+        YW4NS7Y8bshh0E7VWAqthkpn8aX0F2ZWcb33v6JRiUYlGpVoVKJRiUalz09rrXvvpTDzWAC11v3NSWCW
+        zT0WQCllOrzqPBwuC+CXJbg7zru8mJzzdPkNGw5TMCtLcHa8b2g03yx5Gg40nqWUpqHmbTjQOGJL0MZz
+        DI1MjHF5ONB4B//QEML+yL8zNCrRqESjEo1KNCrRqNPdBkhv83f7ZHnxAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="octaveInc.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DwAACw8BkvkDpQAAAAd0SU1FB94LDwQEELWBiwQAAABzSURBVEhL7ZM7DsAgCEC9NYysfm7oYWw00DQh
+        qdXixkveoBHeZHAc5wYRGwA0Pp4hxtgDQyI6E3tGRL6zI6WkIqJZ7C0i8pt9vkTE7VjOWS2buRzbiYg8
+        O6eUooZXncYsIiLv0tRax4+3tO/k9Y7j/CaEC7CZxGARRXRzAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEASABIAAD/4QCqRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAZKG
