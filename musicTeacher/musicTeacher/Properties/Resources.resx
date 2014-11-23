@@ -118,25 +118,73 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="white_background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\white_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1415438860_audio-volume-medium-panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\1415438860_audio-volume-medium-panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\white_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="3_w" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Staff\3_w.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="26722-huntington-piano-1920x1080-music-wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\26722-huntington-piano-1920x1080-music-wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Treble Clef &amp; Notes.PE0389" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\Treble Clef &amp; Notes.PE0389.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chromesemiquaversemergingfromwaterripple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\chromesemiquaversemergingfromwaterripple.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="musical-notes-gif-musicnotes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\musical-notes-gif-musicnotes.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2_w" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Staff\2_w.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white_background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\white_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1415438860_audio-volume-medium-panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\1415438860_audio-volume-medium-panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="violanfor7277" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\violanfor7277.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musical-notes-gif-musicnotes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\musical-notes-gif-musicnotes.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4_czy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Staff\4_czy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white_background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\white_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2_m" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Staff\2_m.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3_m" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Staff\3_m.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Treble Clef &amp; Notes.PE0389" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Treble Clef &amp; Notes.PE0389.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="6_m" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Staff\6_m.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="6_w" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Staff\6_w.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7_m" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Staff\7_m.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8_cz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Staff\8_cz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5_cz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Staff\5_cz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7_w" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Staff\7_w.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circle_of_fifths" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\circle_of_fifths.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\arrow_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

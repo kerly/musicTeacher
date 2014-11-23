@@ -41,5 +41,12 @@ namespace musicTeacher.forms
             eartrainingpage.Show(); 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CircleOfFifths circleoffifths = new CircleOfFifths();
+            this.Hide();
+            circleoffifths.Show(); 
+        }
+
     }
 }

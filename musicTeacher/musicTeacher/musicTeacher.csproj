@@ -49,6 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FlashCards.cs" />
+    <Compile Include="forms\CircleOfFifths.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\CircleOfFifths.Designer.cs">
+      <DependentUpon>CircleOfFifths.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\EarTrainingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="modelClasses\PatternDefinitionScale.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\CircleOfFifths.resx">
+      <DependentUpon>CircleOfFifths.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\EarTrainingPage.resx">
       <DependentUpon>EarTrainingPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +166,10 @@
     <Content Include="images\1415344512_34124.ico" />
     <Content Include="images\1415438860_audio-volume-medium-panel.png" />
     <Content Include="images\26722-huntington-piano-1920x1080-music-wallpaper.jpg" />
+    <Content Include="images\arrow.png" />
+    <Content Include="images\arrow_left.png" />
+    <Content Include="images\chromesemiquaversemergingfromwaterripple.jpg" />
+    <Content Include="images\circle_of_fifths.png" />
     <Content Include="images\Staff\2_m.png" />
     <Content Include="images\Staff\2_w.png" />
     <Content Include="images\Staff\3_m.png" />
@@ -185,6 +198,7 @@
     <Content Include="images\Staff\C-sharp-major_a-sharp-minor.png" />
     <Content Include="images\Staff\E-major_c-sharp-minor.png" />
     <Content Include="images\Staff\F-sharp-major_d-sharp-minor.png" />
+    <Content Include="images\violanfor7277.jpg" />
     <Content Include="images\Treble Clef &amp; Notes.PE0389.gif" />
     <Content Include="images\white_background.jpg" />
   </ItemGroup>
