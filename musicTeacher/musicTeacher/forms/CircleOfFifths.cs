@@ -14,6 +14,7 @@ namespace musicTeacher.forms
     public partial class CircleOfFifths : Form
     {
         private static List<Intervals> allIntervals = null;
+        private int closeFlag = 0;
         int index; 
 
         public CircleOfFifths()
@@ -28,22 +29,24 @@ namespace musicTeacher.forms
         private void trainingModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormTrainingPage formpage = new FormTrainingPage();
-            this.Hide();
-            formpage.Show(); 
+            closeFlag = 1;
+            formpage.Show();
+            this.Close();
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MenuPage menupage = new MenuPage();
-            this.Hide();
-            menupage.Show(); 
+            closeFlag = 1;
+            musicTeacher.forms.MenuPage.menuPage.Show();
+            this.Close();
         }
 
         private void testingModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EarTrainingPage testingpage = new EarTrainingPage();
-            this.Hide();
-            testingpage.Show(); 
+            EarTrainingPage testingPage = new EarTrainingPage();
+            closeFlag = 1;
+            testingPage.Show();
+            this.Close();
         }
 
         private static List<Intervals> createAllIntervals()
@@ -105,7 +108,13 @@ namespace musicTeacher.forms
 
         private void CircleOfFifths_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (closeFlag == 1)
+            {
+                e.Cancel = false;
+                this.Dispose();
+            }
+            else
+                Application.Exit();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

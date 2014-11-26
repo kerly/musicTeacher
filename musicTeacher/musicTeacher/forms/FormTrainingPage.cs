@@ -305,12 +305,17 @@ namespace musicTeacher
 
         private void testingModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            forms.EarTrainingPage testingmode = new forms.EarTrainingPage();
-            this.Hide();
-            testingmode.Show(); 
-            closeFlag = 1;
             forms.EarTrainingPage earTrainingPage = new forms.EarTrainingPage();
+            closeFlag = 1;
             earTrainingPage.Show();
+            this.Close();
+        }
+
+        private void circleOfFifthsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            forms.CircleOfFifths circleOfFifths = new forms.CircleOfFifths();
+            closeFlag = 1;
+            circleOfFifths.Show();
             this.Close();
         }
 

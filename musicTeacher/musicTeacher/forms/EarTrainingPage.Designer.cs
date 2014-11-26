@@ -151,6 +151,7 @@
             this.radioButton15 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.circleOfFifthsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -226,7 +227,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.trainingModeToolStripMenuItem});
+            this.trainingModeToolStripMenuItem,
+            this.circleOfFifthsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1236, 24);
@@ -1635,6 +1637,13 @@
             this.radioButton4.UseVisualStyleBackColor = false;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
+            // circleOfFifthsToolStripMenuItem
+            // 
+            this.circleOfFifthsToolStripMenuItem.Name = "circleOfFifthsToolStripMenuItem";
+            this.circleOfFifthsToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.circleOfFifthsToolStripMenuItem.Text = "Circle of Fifths";
+            this.circleOfFifthsToolStripMenuItem.Click += new System.EventHandler(this.circleOfFifthsToolStripMenuItem_Click);
+            // 
             // EarTrainingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1804,5 +1813,6 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ToolStripMenuItem circleOfFifthsToolStripMenuItem;
     }
 }

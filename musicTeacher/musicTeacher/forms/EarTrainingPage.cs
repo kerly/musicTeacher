@@ -136,14 +136,6 @@ namespace musicTeacher.forms
             return new List<Button>(noteChoiceButtons);
         }
 
-        private void trainingModeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormTrainingPage trainingPage = new FormTrainingPage();
-            closeFlag = 1;
-            trainingPage.Show();
-            this.Close();
-        }
-
         public void RandomFlashCard()
         {
 
@@ -268,8 +260,24 @@ namespace musicTeacher.forms
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             closeFlag = 1;
-            this.Close();
             musicTeacher.forms.MenuPage.menuPage.Show();
+            this.Close();
+        }
+
+        private void trainingModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTrainingPage trainingPage = new FormTrainingPage();
+            closeFlag = 1;
+            trainingPage.Show();
+            this.Close();
+        }
+
+        private void circleOfFifthsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            forms.CircleOfFifths circleOfFifths = new forms.CircleOfFifths();
+            closeFlag = 1;
+            circleOfFifths.Show();
+            this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -394,9 +402,13 @@ namespace musicTeacher.forms
         
         private void EarTrainingPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (closeFlag == 1)  
+            {
+                e.Cancel = false;
+                this.Dispose();
+            }
+            else
+                Application.Exit();
         }
-
-
     }//end of namespace
 }//end of project

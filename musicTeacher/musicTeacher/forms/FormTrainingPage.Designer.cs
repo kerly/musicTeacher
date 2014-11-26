@@ -106,6 +106,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testingModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.circleOfFifthsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.octaveDec = new System.Windows.Forms.Button();
             this.octaveInc = new System.Windows.Forms.Button();
             this.octaveLabel = new System.Windows.Forms.Label();
@@ -1039,7 +1040,6 @@
             this.hidePiano.AutoSize = true;
             this.hidePiano.BackColor = System.Drawing.Color.Transparent;
             this.hidePiano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hidePiano.Location = new System.Drawing.Point(986, 53);
             this.hidePiano.ForeColor = System.Drawing.SystemColors.Control;
             this.hidePiano.Location = new System.Drawing.Point(986, 30);
             this.hidePiano.Name = "hidePiano";
@@ -1054,7 +1054,6 @@
             this.hideLabels.AutoSize = true;
             this.hideLabels.BackColor = System.Drawing.Color.Transparent;
             this.hideLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hideLabels.Location = new System.Drawing.Point(986, 88);
             this.hideLabels.ForeColor = System.Drawing.SystemColors.Control;
             this.hideLabels.Location = new System.Drawing.Point(986, 53);
             this.hideLabels.Name = "hideLabels";
@@ -1068,7 +1067,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.testingModeToolStripMenuItem});
+            this.testingModeToolStripMenuItem,
+            this.circleOfFifthsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1236, 24);
@@ -1080,6 +1080,7 @@
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // testingModeToolStripMenuItem
             // 
@@ -1087,6 +1088,13 @@
             this.testingModeToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.testingModeToolStripMenuItem.Text = "Testing Mode";
             this.testingModeToolStripMenuItem.Click += new System.EventHandler(this.testingModeToolStripMenuItem_Click);
+            // 
+            // circleOfFifthsToolStripMenuItem
+            // 
+            this.circleOfFifthsToolStripMenuItem.Name = "circleOfFifthsToolStripMenuItem";
+            this.circleOfFifthsToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.circleOfFifthsToolStripMenuItem.Text = "Circle of Fifths";
+            this.circleOfFifthsToolStripMenuItem.Click += new System.EventHandler(this.circleOfFifthsToolStripMenuItem_Click);
             // 
             // octaveDec
             // 
@@ -1169,6 +1177,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormTrainingPage";
             this.Text = "Music Teacher";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormTrainingPage_FormClosing);
             this.pianoPanel.ResumeLayout(false);
             this.panelDefinitionBox.ResumeLayout(false);
             this.panelDefinitionBox.PerformLayout();
@@ -1267,5 +1276,6 @@
         private System.Windows.Forms.Label octaveLabel;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Label playSpeedLab;
+        private System.Windows.Forms.ToolStripMenuItem circleOfFifthsToolStripMenuItem;
     }
 }
