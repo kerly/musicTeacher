@@ -1194,6 +1194,8 @@
             this.Name = "FormTrainingPage";
             this.Text = "Music Teacher";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormTrainingPage_FormClosing);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormTrainingPage_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormTrainingPage_KeyUp);
             this.pianoPanel.ResumeLayout(false);
             this.panelDefinitionBox.ResumeLayout(false);
             this.panelDefinitionBox.PerformLayout();
