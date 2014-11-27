@@ -112,6 +112,7 @@
             this.octaveLabel = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.playSpeedLab = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pianoPanel.SuspendLayout();
             this.panelDefinitionBox.SuspendLayout();
             this.panelTabNotes.SuspendLayout();
@@ -1039,11 +1040,11 @@
             // 
             this.hidePiano.AutoSize = true;
             this.hidePiano.BackColor = System.Drawing.Color.Transparent;
-            this.hidePiano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hidePiano.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hidePiano.ForeColor = System.Drawing.SystemColors.Control;
-            this.hidePiano.Location = new System.Drawing.Point(986, 30);
+            this.hidePiano.Location = new System.Drawing.Point(991, 46);
             this.hidePiano.Name = "hidePiano";
-            this.hidePiano.Size = new System.Drawing.Size(94, 20);
+            this.hidePiano.Size = new System.Drawing.Size(105, 24);
             this.hidePiano.TabIndex = 74;
             this.hidePiano.Text = "Hide Piano";
             this.hidePiano.UseVisualStyleBackColor = false;
@@ -1053,11 +1054,11 @@
             // 
             this.hideLabels.AutoSize = true;
             this.hideLabels.BackColor = System.Drawing.Color.Transparent;
-            this.hideLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hideLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hideLabels.ForeColor = System.Drawing.SystemColors.Control;
-            this.hideLabels.Location = new System.Drawing.Point(986, 53);
+            this.hideLabels.Location = new System.Drawing.Point(991, 69);
             this.hideLabels.Name = "hideLabels";
-            this.hideLabels.Size = new System.Drawing.Size(100, 20);
+            this.hideLabels.Size = new System.Drawing.Size(112, 24);
             this.hideLabels.TabIndex = 75;
             this.hideLabels.Text = "Hide Labels";
             this.hideLabels.UseVisualStyleBackColor = false;
@@ -1102,7 +1103,7 @@
             this.octaveDec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.octaveDec.ForeColor = System.Drawing.Color.Transparent;
             this.octaveDec.Image = ((System.Drawing.Image)(resources.GetObject("octaveDec.Image")));
-            this.octaveDec.Location = new System.Drawing.Point(101, 75);
+            this.octaveDec.Location = new System.Drawing.Point(127, 95);
             this.octaveDec.Name = "octaveDec";
             this.octaveDec.Size = new System.Drawing.Size(26, 23);
             this.octaveDec.TabIndex = 78;
@@ -1111,8 +1112,9 @@
             // 
             // octaveInc
             // 
+            this.octaveInc.Enabled = false;
             this.octaveInc.Image = ((System.Drawing.Image)(resources.GetObject("octaveInc.Image")));
-            this.octaveInc.Location = new System.Drawing.Point(101, 30);
+            this.octaveInc.Location = new System.Drawing.Point(127, 46);
             this.octaveInc.Name = "octaveInc";
             this.octaveInc.Size = new System.Drawing.Size(26, 23);
             this.octaveInc.TabIndex = 79;
@@ -1123,11 +1125,11 @@
             // 
             this.octaveLabel.AutoSize = true;
             this.octaveLabel.BackColor = System.Drawing.Color.Transparent;
-            this.octaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.octaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.octaveLabel.ForeColor = System.Drawing.Color.White;
-            this.octaveLabel.Location = new System.Drawing.Point(98, 56);
+            this.octaveLabel.Location = new System.Drawing.Point(100, 72);
             this.octaveLabel.Name = "octaveLabel";
-            this.octaveLabel.Size = new System.Drawing.Size(64, 16);
+            this.octaveLabel.Size = new System.Drawing.Size(76, 20);
             this.octaveLabel.TabIndex = 80;
             this.octaveLabel.Text = "Octave: 3";
             // 
@@ -1135,25 +1137,38 @@
             // 
             this.trackBar1.BackColor = System.Drawing.SystemColors.Control;
             this.trackBar1.LargeChange = 1;
-            this.trackBar1.Location = new System.Drawing.Point(1002, 269);
-            this.trackBar1.Maximum = 5;
+            this.trackBar1.Location = new System.Drawing.Point(991, 292);
+            this.trackBar1.Maximum = 4;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(104, 45);
+            this.trackBar1.Size = new System.Drawing.Size(104, 42);
             this.trackBar1.TabIndex = 81;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar1.Value = 2;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // playSpeedLab
             // 
             this.playSpeedLab.AutoSize = true;
             this.playSpeedLab.BackColor = System.Drawing.Color.Transparent;
-            this.playSpeedLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playSpeedLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playSpeedLab.ForeColor = System.Drawing.Color.White;
-            this.playSpeedLab.Location = new System.Drawing.Point(999, 317);
+            this.playSpeedLab.Location = new System.Drawing.Point(987, 337);
             this.playSpeedLab.Name = "playSpeedLab";
-            this.playSpeedLab.Size = new System.Drawing.Size(92, 16);
+            this.playSpeedLab.Size = new System.Drawing.Size(111, 20);
             this.playSpeedLab.TabIndex = 82;
-            this.playSpeedLab.Text = "Play Speed: 5";
+            this.playSpeedLab.Text = "Slow <--> Fast";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(987, 269);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 20);
+            this.label1.TabIndex = 83;
+            this.label1.Text = "Play Speed";
             // 
             // FormTrainingPage
             // 
@@ -1162,6 +1177,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1236, 637);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.playSpeedLab);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.octaveLabel);
@@ -1277,5 +1293,6 @@
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Label playSpeedLab;
         private System.Windows.Forms.ToolStripMenuItem circleOfFifthsToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }

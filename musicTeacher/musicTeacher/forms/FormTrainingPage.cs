@@ -16,8 +16,9 @@ namespace musicTeacher
     {
         // Constants
         private const int _NOTE_REMAIN_TIME = 500;
-        private const int _PATTERN_REMAIN_TIME = 4000;
+        private const int _PATTERN_REMAIN_TIME = 4500;
         private const int _MAX_CONCURRENT_NOTES = 5;
+        private const float _SPEED_MULTIPLIER = .25f;
 
         // Public variables
         public static int currentOctave = 3;
@@ -29,7 +30,7 @@ namespace musicTeacher
         private static List<Keys> currentlyHeldKeys = new List<Keys>();
         private static int numOfNotesPlaying = 0;
         private int closeFlag = 0;
-        private static int playSpeed = 5;
+        private static int playSpeed = 2;
 
         /// <summary>
         /// Constructor / Initializer
@@ -205,24 +206,46 @@ namespace musicTeacher
             // Set a global variable so other audio sources won't be played
             isPlayingPattern = true;
 
-            // Loop through the notes displaying and playing each one
-            List<Button> pianoButtons = new List<Button>();
-            int waitTime = pattern.getTimeBetweenNotes();
-            foreach (MusicNote note in pattern.getNotes())
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                Button button = NoteFinder.findPianoButtonByNoteName(note.getName(), keyTextList, allPianoButtons);
-                pianoButtons.Add(button);
-                button.BackColor = Color.LightSkyBlue;
-                note.Play();
+            // Determine the time between notes
+            int waitTime = (int)(pattern.getTimeBetweenNotes() * (playSpeed + 1) * _SPEED_MULTIPLIER);
 
-                // Start the watch and wait until the time is up
-                stopWatch.Start();
-                while (stopWatch.Elapsed.TotalMilliseconds < waitTime)
+            // Play MusicChord or MusicPattern
+            List<Button> pianoButtons = new List<Button>();
+            if (pattern.GetType() == typeof(MusicChord) && playSpeed == 0)
+            {
+                // Play all the notes at the same time
+                foreach (MusicNote note in pattern.getNotes())
                 {
-                    // wait
+                    note.Play();
                 }
-                stopWatch.Stop();
+                // Change the color of each button
+                foreach (MusicNote note in pattern.getNotes())
+                {
+                    Button button = NoteFinder.findPianoButtonByNoteName(note.getName(), keyTextList, allPianoButtons);
+                    pianoButtons.Add(button);
+                    button.BackColor = Color.LightSkyBlue;
+                }
+            }
+            else
+            {
+                // Loop through the notes displaying and playing each one
+                foreach (MusicNote note in pattern.getNotes())
+                {
+                    Stopwatch stopWatch = new Stopwatch();
+                    Button button = NoteFinder.findPianoButtonByNoteName(note.getName(), keyTextList, allPianoButtons);
+                    pianoButtons.Add(button);
+                    button.BackColor = Color.LightSkyBlue;
+                    note.Play();
+
+                    // Start the watch and wait until the time is up
+                    stopWatch.Start();
+                    while (stopWatch.Elapsed.TotalMilliseconds < waitTime)
+                    {
+                        // wait
+                    }
+                    stopWatch.Stop();
+                }
+
             }
 
             // Wait a while longer before turning the keys back to their original color
@@ -361,44 +384,33 @@ namespace musicTeacher
             {
                 currentOctave = 3;
                 octaveLabel.Text = "Octave: " + currentOctave;
-            }
-            else if (currentOctave == 3)
-            {
-                currentOctave = 4;
-                octaveLabel.Text = "Octave: " + currentOctave;
-            }
-            else
-            {
-                currentOctave = 2;
-                octaveLabel.Text = "Octave: " + currentOctave;
+
+                // Disable the increase button
+                octaveInc.Enabled = false;
+                // Enable the decrease button
+                octaveDec.Enabled = true;
             }
         }
 
         // Method used to change octave
         private void octaveDec_Click(object sender, EventArgs e)
         {
-            if (currentOctave == 2)
-            {
-                currentOctave = 4;
-                octaveLabel.Text = "Octave: " + currentOctave;
-            }
-            else if (currentOctave == 3)
+            if (currentOctave == 3)
             {
                 currentOctave = 2;
                 octaveLabel.Text = "Octave: " + currentOctave;
-            }
-            else
-            {
-                currentOctave = 3;
-                octaveLabel.Text = "Octave: " + currentOctave;
+
+                // Disable the decrease button
+                octaveDec.Enabled = false;
+                // Enable the increase button
+                octaveInc.Enabled = true;
             }
         }
 
         // Method used to change play speed
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            playSpeed = Math.Abs(trackBar1.Value - 5);
-            playSpeedLab.Text = "Play Speed: " + playSpeed;
+            playSpeed = Math.Abs(trackBar1.Value - 4);
         }
     }
 }

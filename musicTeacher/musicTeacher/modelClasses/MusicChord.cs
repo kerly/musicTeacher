@@ -12,7 +12,7 @@ namespace musicTeacher
         public MusicChord(MusicNote baseNote, PatternDefinitionChord patternDefinition) :
             base(baseNote, patternDefinition)
         {
-            this.timeBetweenNotes = 250;
+            this.timeBetweenNotes = 1000;
         }
 
     }

@@ -201,7 +201,7 @@ namespace musicTeacher
             {
                 int randomNoteIndex = random.Next(0, MusicDefinitions.allMusicNotes.Count - 1);
                 result = MusicDefinitions.allMusicNotes.ElementAt(randomNoteIndex);
-            } while (!isInBounds(result, definition.getNoteRange()) && !result.getName().Contains(octave.ToString()));
+            } while (!isInBounds(result, definition.getNoteRange()) || !result.getName().Contains(octave.ToString()));
 
             return result;
         }
@@ -216,7 +216,7 @@ namespace musicTeacher
         {
             bool result = true;
 
-            if (note.getMidiNumber() + interval > MusicDefinitions.highestMidiNumber)
+            if ((note.getMidiNumber() + interval) > MusicDefinitions.highestMidiNumber)
             {
                 result = false;
             }
