@@ -24,6 +24,7 @@ namespace musicTeacher.forms
             panel1.BackColor = Color.FromArgb(190, Color.White);
             panel2.BackColor = Color.FromArgb(190, Color.White);
             panel3.BackColor = Color.FromArgb(190, Color.White);
+            first_pic(); 
         }
 
         private void trainingModeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,6 +78,14 @@ namespace musicTeacher.forms
         {
             pictureBox2.Image = Image.FromFile(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\images\\Staff\\" + filename);
 
+        }
+
+        //first picture
+        private void first_pic()
+        {
+            index = 0; 
+            displayCard(allIntervals[index].getpicture());
+            label3.Text = "Interval:" + allIntervals[index].getinterval(); 
         }
 
         private void next_pic(object sender, MouseEventArgs e)

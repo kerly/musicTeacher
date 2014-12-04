@@ -336,6 +336,16 @@ namespace musicTeacher.forms
             label4.Text = "";
             label11.Text = "";
             label10.Text = "Answer: " + answer;
+            
+            foreach (Button button in panelTabNotes.Controls.OfType<Button>())
+            {
+                button.BackColor = Color.Transparent;
+            }
+
+            foreach (Button button in panel8.Controls.OfType<Button>())
+            {
+                button.BackColor = Color.Transparent;
+            }
         }
 
         private void checkAnswer(object sender, MouseEventArgs e)
@@ -382,6 +392,20 @@ namespace musicTeacher.forms
 
         private void radioButton7_CheckedChanged(object sender, EventArgs e)
         {
+            foreach (Button button in panelTabNotes.Controls.OfType<Button>())
+            {
+                button.BackColor = Color.Transparent;
+            }
+
+            foreach (Button button in panel8.Controls.OfType<Button>())
+            {
+                button.BackColor = Color.Transparent;
+            }
+
+            panel8.Hide();
+            panelTabNotes.Show(); 
+            label10.Text = "";
+            label11.Text = "";  
             panel4.Visible = true;
             panel1.Visible = false;
             pictureBox1.Visible = false;
@@ -392,6 +416,18 @@ namespace musicTeacher.forms
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
+            foreach (Button button in panelTabNotes.Controls.OfType<Button>())
+            {
+                button.BackColor = Color.Transparent;
+            }
+
+            foreach (Button button in panel8.Controls.OfType<Button>())
+            {
+                button.BackColor = Color.Transparent;
+            }
+            pictureBox1.Image = null;
+            label10.Text = "";
+            label11.Text = ""; 
             panel4.Visible = false;
             panel1.Visible = true;
             pictureBox1.Visible = true;
@@ -410,5 +446,6 @@ namespace musicTeacher.forms
             else
                 Application.Exit();
         }
+
     }//end of namespace
 }//end of project

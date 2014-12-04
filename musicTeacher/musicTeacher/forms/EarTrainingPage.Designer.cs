@@ -38,6 +38,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trainingModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.circleOfFifthsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button19 = new System.Windows.Forms.Button();
@@ -151,7 +152,6 @@
             this.radioButton15 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.circleOfFifthsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -248,6 +248,13 @@
             this.trainingModeToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
             this.trainingModeToolStripMenuItem.Text = "Training Mode";
             this.trainingModeToolStripMenuItem.Click += new System.EventHandler(this.trainingModeToolStripMenuItem_Click);
+            // 
+            // circleOfFifthsToolStripMenuItem
+            // 
+            this.circleOfFifthsToolStripMenuItem.Name = "circleOfFifthsToolStripMenuItem";
+            this.circleOfFifthsToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.circleOfFifthsToolStripMenuItem.Text = "Circle of Fifths";
+            this.circleOfFifthsToolStripMenuItem.Click += new System.EventHandler(this.circleOfFifthsToolStripMenuItem_Click);
             // 
             // panel2
             // 
@@ -1636,13 +1643,6 @@
             this.radioButton4.Text = "Major";
             this.radioButton4.UseVisualStyleBackColor = false;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
-            // 
-            // circleOfFifthsToolStripMenuItem
-            // 
-            this.circleOfFifthsToolStripMenuItem.Name = "circleOfFifthsToolStripMenuItem";
-            this.circleOfFifthsToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.circleOfFifthsToolStripMenuItem.Text = "Circle of Fifths";
-            this.circleOfFifthsToolStripMenuItem.Click += new System.EventHandler(this.circleOfFifthsToolStripMenuItem_Click);
             // 
             // EarTrainingPage
             // 
